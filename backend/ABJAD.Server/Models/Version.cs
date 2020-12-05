@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ABJAD.Server.Models
 {
@@ -13,5 +14,9 @@ namespace ABJAD.Server.Models
         public DateTime LastModifiedDate { get; set; }
 
         public string ExecutablePath { get; set; }
+
+        public List<VersionArticle> Articles { get; set; }
+
+        public List<NewFeature> NewFeatures { get; set; }
     }
 }
