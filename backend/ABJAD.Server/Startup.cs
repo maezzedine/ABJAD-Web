@@ -1,4 +1,5 @@
 using ABJAD.Server.Data;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
@@ -24,6 +25,8 @@ namespace ABJAD.Server
 
             services.AddDbContext<AbjadContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("AbjadContext")));
+
+            services.AddAutoMapper(typeof(Startup).Assembly);
 
             services.AddSwaggerGen(c =>
             {
