@@ -14,5 +14,25 @@ namespace ABJAD.Server.Models
         public string HtmlBody { get; set; }
 
         public List<VersionArticle> Versions { get; set; }
+
+        public Article SetTitle(string title)
+        {
+            if (title != null)
+            {
+                Title = title;
+            }
+
+            return this;
+        }
+
+        public Article SetBody(string body)
+        {
+            if (body != null)
+            {
+                HtmlBody = body;
+            }
+
+            return this;
+        }
     }
 }
