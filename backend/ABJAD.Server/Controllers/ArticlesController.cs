@@ -27,7 +27,7 @@ namespace ABJAD.Server.Controllers
         public class PostArticleDto
         {
             public string Title { get; set; }
-            public string Htmlody { get; set; }
+            public string HtmlBody { get; set; }
         }
 
         /// <summary>
@@ -69,6 +69,18 @@ namespace ABJAD.Server.Controllers
         /// <summary>
         /// Edit an Article
         /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// 
+        ///     PUT /api/articles/4
+        ///     {
+        ///         "Content-Type": "application/json",
+        ///         "body" : {
+        ///             "Title": "",
+        ///             "HtmlBody": ""
+        ///         }
+        ///     }
+        /// </remarks>
         [HttpPut("{id}")]
         public async Task<IActionResult> PutArticle(int id, [FromBody] PostArticleDto article)
         {
@@ -81,7 +93,7 @@ namespace ABJAD.Server.Controllers
 
             articleFromDB
                 .SetTitle(article.Title)
-                .SetBody(article.Htmlody);
+                .SetBody(article.HtmlBody);
 
             context.Entry(articleFromDB).State = EntityState.Modified;
 
@@ -107,6 +119,18 @@ namespace ABJAD.Server.Controllers
         /// <summary>
         /// Create a new Article
         /// </summary>
+        /// <remarks>
+        /// Sample request:
+        /// 
+        ///     POST /api/articles
+        ///     {
+        ///         "Content-Type": "application/json",
+        ///         "body" : {
+        ///             "Title": "",
+        ///             "HtmlBody": ""
+        ///         }
+        ///     }
+        /// </remarks>
         [HttpPost]
         public async Task<ActionResult<Article>> PostArticle([FromQuery] int versionId, [FromBody] PostArticleDto articleDto)
         {
@@ -120,7 +144,7 @@ namespace ABJAD.Server.Controllers
             var article = new Article
             {
                 Title = articleDto.Title,
-                HtmlBody = articleDto.Htmlody,
+                HtmlBody = articleDto.HtmlBody,
                 CreationDate = DateTime.Now,
                 Versions = new List<VersionArticle>() 
             };
