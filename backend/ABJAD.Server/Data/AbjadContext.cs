@@ -1,9 +1,11 @@
 ﻿using ABJAD.Server.Models;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace ABJAD.Server.Data
 {
-    public class AbjadContext : DbContext
+    public class AbjadContext : IdentityDbContext<IdentityUser>
     {
         public AbjadContext(DbContextOptions<AbjadContext> options) 
             : base(options)

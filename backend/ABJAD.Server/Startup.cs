@@ -2,6 +2,7 @@ using ABJAD.Server.Data;
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,6 +27,9 @@ namespace ABJAD.Server
             services.AddDbContext<AbjadContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("AbjadContext")));
 
+            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<AbjadContext>();
+
             services.AddAutoMapper(typeof(Startup).Assembly);
 
             services.AddSwaggerGen(c =>
@@ -47,6 +51,7 @@ namespace ABJAD.Server
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
