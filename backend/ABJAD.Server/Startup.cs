@@ -1,4 +1,6 @@
 using ABJAD.Server.Data;
+using ABJAD.Server.Models;
+using ABJAD.Server.Settings;
 using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -27,8 +29,12 @@ namespace ABJAD.Server
             services.AddDbContext<AbjadContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("AbjadContext")));
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
-                .AddEntityFrameworkStores<AbjadContext>();
+            //services.AddDefaultIdentity<AbjadUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            //    .AddEntityFrameworkStores<AbjadContext>();
+
+            services.AddIdentity<AbjadUser, IdentityRole>()
+                .AddEntityFrameworkStores<AbjadContext>()
+                .AddDefaultTokenProviders();
 
             services.AddAutoMapper(typeof(Startup).Assembly);
 
@@ -36,6 +42,8 @@ namespace ABJAD.Server
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "ABJAD.Server", Version = "v1" });
             });
+
+            services.AddTransient(sp => GetSection<AdminConfigurationsSettings>());
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -43,15 +51,15 @@ namespace ABJAD.Server
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ABJAD.Server v1"));
             }
 
-            app.UseHttpsRedirection();
+            app.UseSwagger();
+            app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ABJAD.Server v1"));
 
+            app.UseHttpsRedirection();
             app.UseRouting();
 
-            app.UseAuthentication();
+            //app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
@@ -61,6 +69,14 @@ namespace ABJAD.Server
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+        }
+
+        private T GetSection<T>() where T : new ()
+        {
+            var settings = new T();
+            var configSettings = Configuration.GetSection(typeof(T).Name);
+            configSettings.Bind(settings);
+            return settings;
         }
     }
 }
