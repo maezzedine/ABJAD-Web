@@ -1,13 +1,15 @@
 ﻿using ABJAD.Server.Models;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using IdentityServer4.EntityFramework.Options;
+using Microsoft.AspNetCore.ApiAuthorization.IdentityServer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 
 namespace ABJAD.Server.Data
 {
-    public class AbjadContext : IdentityDbContext<AbjadUser>
+    public class AbjadContext : ApiAuthorizationDbContext<AbjadUser>
     {
-        public AbjadContext(DbContextOptions<AbjadContext> options) 
-            : base(options)
+        public AbjadContext(DbContextOptions options, IOptions<OperationalStoreOptions> operationalStoreOptions) 
+            : base(options, operationalStoreOptions)
         {
         }
 

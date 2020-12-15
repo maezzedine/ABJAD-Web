@@ -23,6 +23,7 @@ namespace ABJAD.Server.Data
                 {
                     UserName = adminConfig.Username,
                     Email = adminConfig.Email,
+                    EmailConfirmed = true,
                     SecurityStamp = Guid.NewGuid().ToString()
                 };
                 userManager.CreateAsync(SuperUser, adminConfig.Password);

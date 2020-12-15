@@ -2,9 +2,9 @@ using ABJAD.Server.Data;
 using ABJAD.Server.Models;
 using ABJAD.Server.Settings;
 using AutoMapper;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -26,15 +26,19 @@ namespace ABJAD.Server
         {
             services.AddControllers();
 
+            services.AddDatabaseDeveloperPageExceptionFilter();
+
             services.AddDbContext<AbjadContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("AbjadContext")));
 
-            //services.AddDefaultIdentity<AbjadUser>(options => options.SignIn.RequireConfirmedAccount = true)
-            //    .AddEntityFrameworkStores<AbjadContext>();
+            services.AddDefaultIdentity<AbjadUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<AbjadContext>();
 
-            services.AddIdentity<AbjadUser, IdentityRole>()
-                .AddEntityFrameworkStores<AbjadContext>()
-                .AddDefaultTokenProviders();
+            services.AddIdentityServer()
+                .AddApiAuthorization<AbjadUser, AbjadContext>();
+
+            services.AddAuthentication()
+                .AddIdentityServerJwt();
 
             services.AddAutoMapper(typeof(Startup).Assembly);
 
@@ -57,9 +61,11 @@ namespace ABJAD.Server
             app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ABJAD.Server v1"));
 
             app.UseHttpsRedirection();
+            app.UseStaticFiles();
             app.UseRouting();
 
-            //app.UseAuthentication();
+            app.UseAuthentication();
+            app.UseIdentityServer();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
