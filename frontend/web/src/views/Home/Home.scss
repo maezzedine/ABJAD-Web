@@ -1,0 +1,27 @@
+.home {
+    text-align: center;
+    height: 100%;
+    display: flex;
+
+    svg {
+        position: relative;
+        animation-name: logo-animation;
+        animation-duration: 1s;
+        margin: auto;
+        max-height: 30vh;
+        max-width: 30vw;
+    }
+
+    @keyframes logo-animation {
+        from {
+            right: -200px;
+            transform: scale(0.9);
+            fill: transparent;
+        }
+
+        to {
+            right: 0px;
+            transform: scale(1);
+        }
+    }
+}
