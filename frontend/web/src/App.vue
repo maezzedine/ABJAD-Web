@@ -5,7 +5,7 @@
 </template>
 
 <style lang="scss">
-    #app, html, body {
-        height: 100%;
-    }
+  html, body {
+    overflow-y: auto !important;
+  }
 </style>

@@ -6,6 +6,11 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
+    name: 'Cover',
+    component: () => import('@/views/Cover/Cover.vue')
+  },
+  {
+    path: '/:lang',
     name: 'Home',
     component: () => import('@/views/Home/Home.vue')
   },

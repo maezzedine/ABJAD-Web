@@ -1,6 +1,6 @@
 <template>
     <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-         width="800.000000pt" height="297.000000pt" viewBox="0 0 800.000000 297.000000"
+         width="800.000000pt" viewBox="0 0 800.000000 297.000000"
          preserveAspectRatio="xMidYMid meet">
 
         <g transform="translate(0.000000,297.000000) scale(0.100000,-0.100000)">
@@ -44,9 +44,10 @@
     }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import "src/styles/_variables.scss";
     svg {
-        fill: #0092C1;
-        stroke: #0092C1;
+        fill: $color-cyan-main;
+        stroke: $color-cyan-main;
     }
 </style>

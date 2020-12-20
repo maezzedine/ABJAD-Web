@@ -1,0 +1,120 @@
+@import "src/styles/_variables.scss";
+
+.cover {
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(180deg, white, #EBF2FA);
+
+    .logo-container {
+        .v-image, svg {
+            position: relative;
+            animation-name: logo-animation;
+            animation-duration: 1s;
+            width: 30vw;
+            margin-bottom: 10px;
+            
+            @media (max-width: 700px){
+                width: 90vw;
+            }
+        }
+
+        .name {
+            display: flex;
+            justify-content: center;
+            font-size: 5em;
+            color: #6f8799;
+            position: relative;
+            animation-name: name-animation;
+            animation-duration: 1s;
+
+            @media (max-width: 700px){
+                font-size: 4em;
+            }
+
+            .en {
+                font-family: 'Fira Sans', sans-serif;
+            }
+
+            .ar {
+                font-family: 'Lalezar', cursive;
+            }
+        }
+    }
+
+    .languages {
+        width: 30vw;
+        justify-content: space-between;
+
+        @media (max-width: 700px){
+            width: 90%;
+        }
+
+        a {
+            flex: 1;
+        }
+
+        a:first-child {
+            position: relative;
+            animation-name: english-btn-animation;
+            animation-duration: 1s;
+        }
+
+        a:not(:first-child) {
+            position: relative;
+            animation-name: arabic-btn-animation;
+            animation-duration: 1s;
+        }
+    }
+
+    @keyframes logo-animation {
+        from {
+            top: -100px;
+            transform: scale(0.9);
+            fill: transparent;
+        }
+
+        to {
+            top: 0px;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes name-animation {
+        from {
+            bottom: -100px;
+            transform: scale(0.9);
+            fill: transparent;
+        }
+
+        to {
+            bottom: 0px;
+            transform: scale(1);
+        }
+    }
+
+    @keyframes english-btn-animation {
+        from {
+            left: -50px;
+            fill: transparent;
+        }
+
+        to {
+            left: 0px;
+        }
+    }
+
+    @keyframes arabic-btn-animation {
+        from {
+            right: -50px;
+            fill: transparent;
+        }
+
+        to {
+            right: 0px;
+        }
+    }
+}
