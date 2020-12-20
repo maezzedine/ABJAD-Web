@@ -26,15 +26,5 @@
 	</div>
 </template>
 
-<script>
-    import abjadLogo from '@/components/svgs/abjadLogo.vue';
-
-    export default {
-        name: 'Cover',
-        components: {
-            abjadLogo
-        },
-    }
-</script>
-
-<style lang="scss" src="./Cover.scss"></style>
+<script src="./Cover.js"></script>
+<style lang="scss" src="./Cover.scss" scoped></style>

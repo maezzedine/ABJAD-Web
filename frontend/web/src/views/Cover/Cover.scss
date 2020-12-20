@@ -1,6 +1,7 @@
 @import "src/styles/_variables.scss";
 
 .cover {
+    direction: ltr !important;
     text-align: center;
     height: 100%;
     display: flex;

@@ -1,8 +1,12 @@
 <template>
   <v-app id="app">
-    <router-view/>
+    <v-main>
+      <router-view/>
+    </v-main>
   </v-app>
 </template>
+
+<script src="./App.js"></script>
 
 <style lang="scss">
   html, body {
