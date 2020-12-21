@@ -1,0 +1,17 @@
+.v-heading>a:not(:hover):not(:focus) {
+    opacity: 0;
+}
+
+.v-heading {
+    position: relative;
+}
+
+.v-heading>a {
+    bottom: 0;
+    display: inline-block;
+    left: 0;
+    margin: 0 -.7em;
+    position: absolute;
+    right: 0;
+    top: 0;
+}

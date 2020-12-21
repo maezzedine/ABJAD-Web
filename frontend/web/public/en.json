@@ -1,5 +1,14 @@
 {
 	"about": "About",
+	"copy-complete": "Code copied to clipboard",
+	"dir": "ltr",
+	"documentation": "Documentation",
+	"getting-started": "Getting Started",
+	"installation": "Installation",
+	"introduction": "Introduction",
+	"lang": "en",
 	"online-editor": "Online Editor",
-	"second-language": "العربية"
+	"second-language": "العربية",
+	"what-is-abjad": "What is ABJAD?",
+	"why-abjad": "Why ABJAD?"
 }

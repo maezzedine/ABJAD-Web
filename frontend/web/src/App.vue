@@ -1,15 +1,26 @@
 <template>
   <v-app id="app">
-    <v-main>
       <router-view/>
-    </v-main>
   </v-app>
 </template>
 
 <script src="./App.js"></script>
 
 <style lang="scss">
-  html, body {
+  #app, html, body {
     overflow-y: auto !important;
+    height: 100%;
+  }
+
+  .abjad {
+
+    &:lang(en) {
+      font-weight: bold;
+      font-family: 'Fira Sans', sans-serif;
+    }
+
+    &:lang(ar) {
+      font-family: 'Lalezar', cursive;
+    }
   }
 </style>

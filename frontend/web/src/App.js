@@ -14,7 +14,8 @@ export default {
 						.then(ar => {
 							this.$store.dispatch('setArabicFile', ar);
 						});
-				});
+				})
+				.catch(e => console.log(e));
 		}
 	}
 }

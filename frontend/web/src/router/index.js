@@ -11,8 +11,20 @@ const routes = [
   },
   {
     path: '/:lang',
-    name: 'Home',
-    component: () => import('@/views/Home/Home.vue')
+    // name: 'Home',
+    component: () => import('@/views/Home/Home.vue'),
+    children: [
+      {
+        path: '/:lang/introduction/what-is-abjad',
+        name: 'Home',
+        component: () => import ('@/views/Introduction/WhatIsAbjad.vue')
+      },
+      {
+        path: '/',
+        redirect: '/:lang/introduction/what-is-abjad'
+        // component: () => import ('@/views/Introduction/WhatIsAbjad.vue')
+      }
+    ]
   },
 ]
 

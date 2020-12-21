@@ -1,5 +1,14 @@
 {
 	"about": "عن أبجد",
+	"copy-complete": "تم نسخ محتوى الكود",
+	"dir": "rtl",
+	"documentation": "تعليمات",
+	"getting-started": "البداية",
+	"installation": "تحميل",
+	"introduction": "المقدمة",
+	"lang": "ar",
 	"online-editor": "محول برمجي",
-	"second-language": "English"
+	"second-language": "English",
+	"what-is-abjad": "ما هي أبجد؟",
+	"why-abjad": "لماذا أبجد؟"
 }

@@ -1,10 +1,13 @@
 <template>
-	<div class="home">
-        <v-navigation-drawer style="border: 1px solid black">
-            <!-- -->
-        </v-navigation-drawer>
+	<v-app class="home" app>
+        <drawer />
         <app-bar />
-	</div>
+        <v-main>
+            <v-container fluid>
+                <router-view class="window"/>
+            </v-container>
+        </v-main>
+	</v-app>
 </template>
 
 <script src="./Home.js"></script>
