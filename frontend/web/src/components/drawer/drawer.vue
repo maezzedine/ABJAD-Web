@@ -14,18 +14,29 @@
 			:open="initiallyOpen"
 			item-key="name"
 		>
-			<template v-slot:prepend="{ item, open }">
-				<v-icon>
-					{{ open ? item.open : item.close }}
-				</v-icon>
+			<template slot="label" slot-scope="props">
+				<router-link 
+					v-if="props.item.link" 
+					:to="props.item.link"
+					class="text-decoration-none">
+					<v-icon>
+						{{ props.open ? props.item.open : props.item.close }}
+					</v-icon>
+					{{props.item.name}}
+				</router-link>
+				<div v-else>
+					<v-icon>
+						{{ props.open ? props.item.open : props.item.close }}
+					</v-icon>
+					{{props.item.name}}
+				</div>
+				
 			</template>
 		</v-treeview>
 	</v-navigation-drawer>
 </template>
 
 <script>
-import { mdiTextBoxMultipleOutline } from '@mdi/js';
-
 export default {
 	name: 'Drawer',
 	computed: {
@@ -38,8 +49,8 @@ export default {
 					id: 1,
 					name: this.$store.getters.context['introduction'],
 					children: [
-						{ id: 2, name: this.$store.getters.context['what-is-abjad'] },
-						{ id: 3, name: this.$store.getters.context['why-abjad'] },
+						{ id: 2, name: this.$store.getters.context['what-is-abjad'], link: `/${this.$store.getters.lang}/introduction/what-is-abjad` },
+						{ id: 3, name: this.$store.getters.context['why-abjad'], link: `/${this.$store.getters.lang}/introduction/why-abjad`  },
 					],
 					open: 'mdi-script-text',
 					close: 'mdi-script-text-outline'

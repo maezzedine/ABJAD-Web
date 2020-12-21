@@ -20,9 +20,13 @@ const routes = [
         component: () => import ('@/views/Introduction/WhatIsAbjad.vue')
       },
       {
+        path: '/:lang/introduction/why-abjad',
+        name: 'WhyAbjad',
+        component: () => import ('@/views/Introduction/WhyAbjad.vue')
+      },
+      {
         path: '/',
         redirect: '/:lang/introduction/what-is-abjad'
-        // component: () => import ('@/views/Introduction/WhatIsAbjad.vue')
       }
     ]
   },

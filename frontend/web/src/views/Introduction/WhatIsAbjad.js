@@ -8,14 +8,8 @@ export default {
 		}
     },
     computed: {
-        lang() {
-            return this.$store.getters['lang'];
-        },
         isArabic() {
-            return this.lang == 'ar';
-        },
-        context() {
-            return this.$store.getters.context['what-is-abjad'];
+            return this.$store.getters['lang'] == 'ar';
         }
     }
 }

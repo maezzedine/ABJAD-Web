@@ -130,10 +130,26 @@
 									without any further steps. <br />
 									On the other hand, compiled languages, require a compiler, that takes a code, analyzes it,
 									and constructs a machine code that resembles its functionality. This machine code is what the computer needs to execute.
+								
 							</p>
 					</section>
 				</section>
+			<hr />
 
+			<v-footer class="pt-6">
+				<div 
+					:class="{ 'mr-auto' : isArabic, 'ml-auto' : !isArabic}">
+					<router-link 
+						class="text-decoration-none text-h6"
+						:to="`/${$route.params.lang}/introduction/why-abjad`">
+						<template v-if="isArabic">لماذا <span class="abjad">أبجد</span>؟</template>
+						<template v-else>Why <span class="abjad">ABJAD</span>?</template>
+					</router-link>
+					<v-icon>
+						{{isArabic? 'mdi-chevron-left': 'mdi-chevron-right'}}
+					</v-icon>
+				</div>
+			</v-footer>
 		</section>
 
 		<v-navigation-drawer

@@ -9,6 +9,7 @@
 <style lang="scss">
   #app, html, body {
     overflow-y: auto !important;
+    overflow-x: hidden !important;
     height: 100%;
   }
 

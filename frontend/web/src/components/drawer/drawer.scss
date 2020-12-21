@@ -1,3 +1,17 @@
 .drawer {
   flex: 1 1 auto;
 }
+
+.v-treeview-node__root .v-treeview-node__content .v-treeview-node__label {
+  display: flex !important;
+}
+
+.v-treeview-node__label a {
+  color: inherit !important;
+  flex: 1 !important;
+}
+
+.v-treeview-node__label 
+.router-link-active {
+  color: $color-cyan-main !important;
+}
