@@ -1,5 +1,5 @@
 <template>
-	<div id="introduction" class="row">
+	<div id="introduction" class="row page-body">
 		<section id="why-abjad" class="mt-10 mb-5">
 			<h2 class="v-heading text-h4 text-sm-h4 mb-3">
 				<a href="#why-abjad"
@@ -39,6 +39,19 @@
 						<template v-else>What is <span class="abjad">ABJAD</span>?</template>
 					</router-link>
 				</div>
+				
+				<div 
+					:class="{ 'mr-auto' : isArabic, 'ml-auto' : !isArabic}">
+					<router-link 
+						class="text-decoration-none text-h6"
+						:to="`/${$route.params.lang}/getting-started/installation`">
+						<template v-if="isArabic">التحميل</template>
+						<template v-else>Installation</template>
+					</router-link>
+					<v-icon>
+						{{isArabic? 'mdi-chevron-left': 'mdi-chevron-right'}}
+					</v-icon>
+				</div>
 			</v-footer>
 		</section>
 
@@ -51,11 +64,11 @@
 			class="pa-3"
 		>
 			<template v-slot:prepend>
-        <div class="mb-2 text-h6 font-weight-medium text--primary" path="contents">
-					<template v-if="isArabic">المحتوى</template>
-					<template v-else>Contents</template>
-				</div>
-      </template>
+				<div class="mb-2 text-h6 font-weight-medium text--primary" path="contents">
+							<template v-if="isArabic">المحتوى</template>
+							<template v-else>Contents</template>
+						</div>
+			</template>
 
 				<ul>
 					<router-link 
@@ -78,14 +91,6 @@
 	</div>
 </template>
 
-<script>
-export default {
-    computed: {
-        isArabic() {
-            return this.$store.getters['lang'] == 'ar';
-        }
-    }
-}
-</script>
+<script src="./WhyAbjad.js"></script>
 
 <style lang="scss" src="./Introduction.scss" scoped></style>

@@ -1,5 +1,5 @@
 <template>
-	<div class="app-code overflow-hidden v-sheet v-sheet--outlined theme--light rounded grey lighten-5" dir="rtl">
+	<div class="app-code overflow-hidden v-sheet v-sheet--outlined theme--light rounded grey lighten-5" :dir="direction? direction : 'rtl'">
 		
 		<!-- Code goeas here -->
 		<pre class="language-bash">
@@ -11,7 +11,8 @@
 		<!-- Copy button -->
 		<button type="button" 
 			@click="copyCode()"
-			class="v-btn--copy mr-n2 mt-n2 v-btn v-btn--absolute v-btn--flat v-btn--icon v-btn--left v-btn--round v-btn--top theme--light v-size--default" 
+			class="v-btn--copy mr-n2 mt-n2 v-btn v-btn--absolute v-btn--flat v-btn--icon v-btn--round v-btn--top theme--light v-size--default" 
+			:class="{ 'v-btn--left': !direction || direction == 'rtl', 'v-btn--right': direction == 'ltr'}"
 			style="background-color: inherit;">
 			<span class="v-btn__content">
 				<span aria-hidden="true" class="v-icon notranslate theme--light grey--text">
@@ -48,6 +49,7 @@
 export default {
 	props: {
 		codes: Array,
+		direction: String
 	},
 	data() {
 		return {

@@ -15,6 +15,10 @@ const routes = [
     component: () => import('@/views/Home/Home.vue'),
     children: [
       {
+        path: '/',
+        redirect: '/:lang/introduction/what-is-abjad'
+      },
+      {
         path: '/:lang/introduction/what-is-abjad',
         name: 'Home',
         component: () => import ('@/views/Introduction/WhatIsAbjad.vue')
@@ -25,9 +29,15 @@ const routes = [
         component: () => import ('@/views/Introduction/WhyAbjad.vue')
       },
       {
-        path: '/',
-        redirect: '/:lang/introduction/what-is-abjad'
-      }
+        path: '/:lang/getting-started/installation',
+        name: 'Installation',
+        component: () => import ('@/views/GettingStarted/Installation.vue')
+      },
+      {
+        path: '/:lang/getting-started/first-program',
+        name: 'FirstProgram',
+        component: () => import ('@/views/GettingStarted/FirstProgram.vue')
+      },
     ]
   },
 ]

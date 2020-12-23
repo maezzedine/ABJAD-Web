@@ -17,12 +17,11 @@ export default {
     },
     methods: {
         setTitle() {
-		    window.document.title = (this.isArabic)? 'أبجد - ما هي أبجد؟' : 'ABJAD - What is ABJAD?';
+		    window.document.title = (this.isArabic)? 'أبجد -كتابة أول برنامج' : 'ABJAD - Your First Program';
         }
     },
     watch: {
         isArabic: function () {
-            console.log('hey');
             this.setTitle();
         }
     }

@@ -1,11 +1,8 @@
-import codeArea from '@/components/codeArea/codeArea.vue';
-
 export default {
-    components: { codeArea },
-	data() {
-		return {
-            codes: [ 'أكتب ("مرحبا بالعالم!")؛' ],
-		}
+    data() {
+        return {
+            tab: null
+        }
     },
     created() {
         this.setTitle();
@@ -17,7 +14,7 @@ export default {
     },
     methods: {
         setTitle() {
-		    window.document.title = (this.isArabic)? 'أبجد - ما هي أبجد؟' : 'ABJAD - What is ABJAD?';
+		    window.document.title = (this.isArabic)? 'أبجد - التحميل' : 'ABJAD - Installation';
         }
     },
     watch: {

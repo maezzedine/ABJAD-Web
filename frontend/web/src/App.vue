@@ -7,10 +7,10 @@
 <script src="./App.js"></script>
 
 <style lang="scss">
-  #app, html, body {
+  #app, body {
     overflow-y: auto !important;
-    overflow-x: hidden !important;
     height: 100%;
+    overflow-x: hidden !important;
   }
 
   .abjad {

@@ -1,6 +1,8 @@
 @import '@/styles/_headings.scss';
 @import '@/styles/_content-drawer.scss';
 
-section section {
-    margin-bottom: 3rem;
+.installation-steps {
+    li {
+        margin-top: 30px;
+    }
 }

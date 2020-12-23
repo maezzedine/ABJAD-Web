@@ -62,11 +62,12 @@ export default {
 						{
 							id: 6,
 							name: this.$store.getters.context['installation'],
-							children: [
-								{ id: 7, name: 'Windows' },
-								{ id: 8, name: 'MacOS' },
-								{ id: 9, name: 'Linux' },
-							],
+							link: `/${this.$store.getters.lang}/getting-started/installation`
+						},
+						{
+							id: 7,
+							name: this.$store.getters.context['first-program'],
+							link: `/${this.$store.getters.lang}/getting-started/first-program`
 						},
 						{ id: 10, name: this.$store.getters.context['online-editor'] },
 					],

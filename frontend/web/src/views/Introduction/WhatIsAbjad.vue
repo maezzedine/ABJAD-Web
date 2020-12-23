@@ -1,7 +1,7 @@
 <template>
 	<div class="row">
 		<section id="introduction"
-				class="container pt-4 pt-sm-6 pt-md-8 container--fluid">
+				class="container page-body pt-4 pt-sm-6 pt-md-8 container--fluid">
 				<h1 class="v-heading text-h3 text-sm-h3 mb-3">
 						<a href="#introduction"
 						class="text-decoration-none text-right text-md-left">#</a>
