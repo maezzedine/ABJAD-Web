@@ -1,4 +1,5 @@
 import codeArea from '@/components/codeArea/codeArea.vue';
+import scroll from '@/services/scroll.js';
 
 export default {
     components: { codeArea },
@@ -18,7 +19,10 @@ export default {
     methods: {
         setTitle() {
 		    window.document.title = (this.isArabic)? 'أبجد -كتابة أول برنامج' : 'ABJAD - Your First Program';
-        }
+        },
+        anchorHashCheck() {
+			scroll.anchorHashCheck(this);
+		}
     },
     watch: {
         isArabic: function () {

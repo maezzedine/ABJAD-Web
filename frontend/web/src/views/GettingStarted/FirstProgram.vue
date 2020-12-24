@@ -226,6 +226,7 @@
 				<router-link 
 					tag="li"
 					to="#first-program" 
+					@click.native="anchorHashCheck()"
 					class="transition-swing text-body-2 py-1 font-weight-regular text--disabled"
 					:class="{'pl-3' : !isArabic, 'pr-3': isArabic}"
 				>
@@ -241,6 +242,7 @@
 				<router-link 
 					tag="li"
 					to="#text-editor" 
+					@click.native="anchorHashCheck()"
 					class="transition-swing text-body-2 py-1 font-weight-regular text--disabled"
 					:class="{'pl-6' : !isArabic, 'pr-6': isArabic}"
 				>
@@ -256,6 +258,7 @@
 				<router-link 
 					tag="li"
 					to="#notepad-installation" 
+					@click.native="anchorHashCheck()"
 					class="transition-swing text-body-2 py-1 font-weight-regular text--disabled"
 					:class="{'pl-9' : !isArabic, 'pr-9': isArabic}"
 				>
@@ -271,6 +274,7 @@
 				<router-link 
 					tag="li"
 					to="#notepad-configuration" 
+					@click.native="anchorHashCheck()"
 					class="transition-swing text-body-2 py-1 font-weight-regular text--disabled"
 					:class="{'pl-9' : !isArabic, 'pr-9': isArabic}"
 				>
@@ -286,6 +290,7 @@
 				<router-link 
 					tag="li"
 					to="#hello-world-app" 
+					@click.native="anchorHashCheck()"
 					class="transition-swing text-body-2 py-1 font-weight-regular text--disabled"
 					:class="{'pl-6' : !isArabic, 'pr-6': isArabic}"
 				>
@@ -301,6 +306,7 @@
 				<router-link 
 					tag="li"
 					to="#running-app" 
+					@click.native="anchorHashCheck()"
 					class="transition-swing text-body-2 py-1 font-weight-regular text--disabled"
 					:class="{'pl-6' : !isArabic, 'pr-6': isArabic}"
 				>

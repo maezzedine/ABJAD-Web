@@ -1,3 +1,5 @@
+import scroll from '@/services/scroll.js';
+
 export default {
     created() {
         this.setTitle();
@@ -10,7 +12,10 @@ export default {
     methods: {
         setTitle() {
 		    window.document.title = (this.isArabic)? 'أبجد - لماذا أبجد؟' : 'ABJAD - Why ABJAD?';
-        }
+        },
+        anchorHashCheck() {
+			scroll.anchorHashCheck(this);
+		}
     },
     watch: {
         isArabic: function () {

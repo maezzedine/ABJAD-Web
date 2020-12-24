@@ -1,4 +1,5 @@
 import api from '@/services/api.js';
+import scroll from '@/services/scroll.js';
 
 export default {
 	name: "App",
@@ -7,8 +8,8 @@ export default {
 	},
 	mounted: function()
   {
-    // From testing, without a brief timeout, it won't work.
-    setTimeout(() => this.scrollFix(this.$route.hash), 10);
+		window.addEventListener("scroll", this.onScroll)
+    setTimeout(() => this.anchorHashCheck(this.$route.hash), 1000);
   },
 	methods: {
 		getLanguages: function() {
@@ -23,22 +24,10 @@ export default {
 				.catch(e => console.log(e));
 		},
 		anchorHashCheck() {
-			if (window.location.hash === this.$route.hash) {
-				const el = document.getElementById(this.$route.hash.slice(1))
-
-				if (el) {
-					window.scrollTo({
-							left: 0, 
-							top: el.offsetTop,
-							behavior: 'smooth'
-					})
-				}
-			}
+			scroll.anchorHashCheck(this);
 		},
-	},
-	watch: {
-		$route:  function() {
-				this.anchorHashCheck();
+		onScroll() {
+			scroll.onScroll(this);
 		}
 	}
 }

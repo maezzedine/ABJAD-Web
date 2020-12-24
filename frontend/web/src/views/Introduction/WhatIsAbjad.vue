@@ -171,6 +171,7 @@
 					<router-link 
 						tag="li"
 						to="#what-is-abjad" 
+						@click.native="anchorHashCheck()"
 						class="transition-swing text-body-2 py-1 font-weight-regular text--disabled"
 						:class="{'pl-3' : !isArabic, 'pr-3': isArabic}"
 					>
@@ -186,6 +187,7 @@
 					<router-link 
 						tag="li"
 						to="#abjad-is-arabic-programming-language" 
+						@click.native="anchorHashCheck()"
 						class="transition-swing pl-3 text-body-2 py-1 font-weight-regular text--disabled"
 						:class="{'pl-6' : !isArabic, 'pr-6': isArabic}"
 					>
@@ -202,6 +204,7 @@
 						tag="li"
 						to="#abjad-is-scripting-language" 
 						disabled="true"
+						@click.native="anchorHashCheck()"
 						class="transition-swing pl-3 text-body-2 py-1 font-weight-regular text--disabled"
 						:class="{'pl-6' : !isArabic, 'pr-6': isArabic}"
 					>
@@ -217,6 +220,7 @@
 					<router-link 
 						to="#abjad-is-interpreted-language" 
 						tag="li"
+						@click.native="anchorHashCheck()"
 						class="transition-swing pl-3 text-body-2 py-1 font-weight-regular text--disabled"
 						:class="{'pl-6' : !isArabic, 'pr-6': isArabic}"
 					>

@@ -73,7 +73,8 @@
 				<ul>
 					<router-link 
 						tag="li"
-						to="#what-is-abjad" 
+						to="#why-abjad" 
+						@click.native="anchorHashCheck()"
 						class="transition-swing text-body-2 py-1 font-weight-regular text--disabled"
 						:class="{'pl-3' : !isArabic, 'pr-3': isArabic}"
 					>

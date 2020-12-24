@@ -1,3 +1,5 @@
+import scroll from '@/services/scroll.js';
+
 export default {
     data() {
         return {
@@ -15,7 +17,10 @@ export default {
     methods: {
         setTitle() {
 		    window.document.title = (this.isArabic)? 'أبجد - التحميل' : 'ABJAD - Installation';
-        }
+        },
+        anchorHashCheck() {
+			scroll.anchorHashCheck(this);
+		},
     },
     watch: {
         isArabic: function () {
