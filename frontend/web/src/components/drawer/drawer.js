@@ -56,6 +56,11 @@ export default {
 							name: this.$store.getters.context['constants'],
 							link: `/${this.$store.getters.lang}/documentation/constants`
 						},
+            {
+							id: 19,
+							name: this.$store.getters.context['types'],
+							link: `/${this.$store.getters.lang}/documentation/types`
+						},
 					]
 				},
 				{

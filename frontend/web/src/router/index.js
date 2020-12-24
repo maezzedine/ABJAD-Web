@@ -52,6 +52,11 @@ const routes = [
         name: 'Constants',
         component: () => import ('@/views/Documentation/Constants/Constants.vue')
       },
+      {
+        path: '/:lang/documentation/types',
+        name: 'Types',
+        component: () => import ('@/views/Documentation/Types/Types.vue')
+      },
     ]
   },
 ]

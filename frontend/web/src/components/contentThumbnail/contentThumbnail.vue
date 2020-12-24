@@ -17,7 +17,7 @@
     <ul>
       <router-link 
         v-for="link in links"
-        :key="link.id"
+        :key="`${$route.params.lang}-${link.id}`"
         tag="li"
         :to="`#${link.id}`" 
         @click.native="anchorHashCheck()"
