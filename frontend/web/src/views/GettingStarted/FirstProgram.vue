@@ -1,5 +1,5 @@
 <template>
-    <div class="page-body">
+	<div class="page-body">
 		<section id="first-program" class="mt-10 mb-5">
 			<h2 class="v-heading text-h4 text-sm-h4 mb-3">
 				<a href="#first-program"
@@ -28,13 +28,16 @@
                     في البداية، ستحتاج لمحرر نصوص يدعم خاصية الكتابة من اليمين إلى اليسار. <br />
                     يُمكنك استخدام ++Notepad، الذي بدورنا سنعتمد عليه في الشرح التالي. <br />
                     <v-container>
-											<v-sheet 
-												color="red lighten-5"
-												elevation="1"
-												class="pa-5 font-weight-medium"
+											<v-alert
+												text
+												border="left"
+												type="warning"
+												elevation="2"
+												icon="mdi-alert-outline"
+      									color="deep-orange"
 											>
 												ملاحظة: برنامج Microsoft Office Word لا يقوم بالمهمة المطلوبة هنا. 
-											</v-sheet>
+											</v-alert>
                     </v-container>
                 </p>
                 <p v-else>
@@ -72,7 +75,7 @@
                             ضبط اتجاه الكتابة في المحرر
                         </template>
                         <template v-else>
-                            Configuring the text direction
+                            Configuring The Text Direction
                         </template>
                     </h2>
 
@@ -120,14 +123,14 @@
                 </p>
 
                 <section id="running-app" class="mt-10 mb-5">
-                    <h2 class="v-heading text-h5 text-sm-h5 mb-3">
+                    <h2 class="v-heading text-h6 text-sm-h6 mb-3">
                         <a href="#running-app"
                         class="text-decoration-none text-right text-md-left">#</a>
                         <template v-if="isArabic">
                             تشغيل البرنامج
                         </template>
                         <template v-else>
-                            Running the program
+                            Running The Program
                         </template>
                     </h2>
 
@@ -155,18 +158,18 @@
                     </v-card>
 
                     <p v-if="isArabic">
-                        بعد تشغيل الأمر، سيظهر لديك ملف اسمه HelloWorld.txt
+                        بعد تشغيل الأمر، سيظهر لديك ملف اسمه <code>HelloWorld.txt</code>
                         <v-card class="mt-2 mb-2">
                             <v-img contain class="mx-auto" max-height="500" max-width="700" src="/first-app-step-4.png"></v-img>
                         </v-card>
-                        قم بفتحه، ستجد مكتوبا فيه عبارة "مرحبا بالعالم!".
+                        قم بفتحه، ستجد مكتوبا فيه عبارة <code>"مرحبا بالعالم!"</code>
                     </p>
                     <p v-else>
-                        After you run the command, a text file named HelloWorld.txt should appear in your folder.
+                        After you run the command, a text file named <code>HelloWorld.txt</code> should appear in your folder.
                         <v-card class="mt-2 mb-2">
                             <v-img contain class="mx-auto" max-height="500" max-width="700" src="/first-app-step-4.png"></v-img>
                         </v-card>
-                        Open the file, it should contain the text "!مرحبا بالعالم".
+                        Open the file, it should contain the text <code>"!مرحبا بالعالم"</code>
                     </p>
 
                 </section>
@@ -207,120 +210,7 @@
             </v-footer>
 		</section>
 
-		<v-navigation-drawer
-			id="default-toc"
-			:right="$store.getters.context['dir'] !== 'rtl'"
-			floating
-			clipped
-			app
-			class="pa-3"
-		>
-			<template v-slot:prepend>
-				<div class="mb-2 text-h6 font-weight-medium text--primary" path="contents">
-					<template v-if="isArabic">المحتوى</template>
-					<template v-else>Contents</template>
-				</div>
-			</template>
-
-			<ul>
-				<router-link 
-					tag="li"
-					to="#first-program" 
-					@click.native="anchorHashCheck()"
-					class="transition-swing text-body-2 py-1 font-weight-regular text--disabled"
-					:class="{'pl-3' : !isArabic, 'pr-3': isArabic}"
-				>
-					<a href="#first-program" class="text-decoration-none">
-						<template v-if="isArabic">
-					        كتابة أول برنامج <span class="abjad">أبجد</span>
-						</template>
-						<template v-else>
-					        Writing Your First <span class="abjad">ABJAD</span> Program
-						</template>
-					</a>
-				</router-link>
-				<router-link 
-					tag="li"
-					to="#text-editor" 
-					@click.native="anchorHashCheck()"
-					class="transition-swing text-body-2 py-1 font-weight-regular text--disabled"
-					:class="{'pl-6' : !isArabic, 'pr-6': isArabic}"
-				>
-					<a href="#text-editor" class="text-decoration-none">
-						<template v-if="isArabic">
-					        محرر نصوص
-						</template>
-						<template v-else>
-					        RTL Text Editor
-						</template>
-					</a>
-				</router-link>
-				<router-link 
-					tag="li"
-					to="#notepad-installation" 
-					@click.native="anchorHashCheck()"
-					class="transition-swing text-body-2 py-1 font-weight-regular text--disabled"
-					:class="{'pl-9' : !isArabic, 'pr-9': isArabic}"
-				>
-					<a href="#notepad-installation" class="text-decoration-none">
-						<template v-if="isArabic">
-					        التحميل
-						</template>
-						<template v-else>
-					        Installation
-						</template>
-					</a>
-				</router-link>
-				<router-link 
-					tag="li"
-					to="#notepad-configuration" 
-					@click.native="anchorHashCheck()"
-					class="transition-swing text-body-2 py-1 font-weight-regular text--disabled"
-					:class="{'pl-9' : !isArabic, 'pr-9': isArabic}"
-				>
-					<a href="#notepad-configuration" class="text-decoration-none">
-						<template v-if="isArabic">
-					        ضبط اتجاه الكتبة
-						</template>
-						<template v-else>
-					        Configuring the text direction
-						</template>
-					</a>
-				</router-link>
-				<router-link 
-					tag="li"
-					to="#hello-world-app" 
-					@click.native="anchorHashCheck()"
-					class="transition-swing text-body-2 py-1 font-weight-regular text--disabled"
-					:class="{'pl-6' : !isArabic, 'pr-6': isArabic}"
-				>
-					<a href="#hello-world-app" class="text-decoration-none">
-						<template v-if="isArabic">
-					        برنامج يكتب "مرحبا بالعالم!"
-						</template>
-						<template v-else>
-					        Hello World Program
-						</template>
-					</a>
-				</router-link>
-				<router-link 
-					tag="li"
-					to="#running-app" 
-					@click.native="anchorHashCheck()"
-					class="transition-swing text-body-2 py-1 font-weight-regular text--disabled"
-					:class="{'pl-6' : !isArabic, 'pr-6': isArabic}"
-				>
-					<a href="#running-app" class="text-decoration-none">
-						<template v-if="isArabic">
-					        تشغيل البرنامج
-						</template>
-						<template v-else>
-					        Running the program
-						</template>
-					</a>
-				</router-link>
-			</ul>
-		</v-navigation-drawer>
+		<content-thumbnail :links="links" />
 	</div>
 </template>
 

@@ -118,41 +118,7 @@
 				</div>
 			</v-footer> 
 		</section>
-
-		<v-navigation-drawer
-			id="default-toc"
-			:right="$store.getters.context['dir'] !== 'rtl'"
-			floating
-			clipped
-			app
-			class="pa-3"
-		>
-			<template v-slot:prepend>
-				<div class="mb-2 text-h6 font-weight-medium text--primary" path="contents">
-					<template v-if="isArabic">المحتوى</template>
-					<template v-else>Contents</template>
-				</div>
-			</template>
-
-			<ul>
-				<router-link 
-					tag="li"
-					to="#installation" 
-					@click.native="anchorHashCheck()"
-					class="transition-swing text-body-2 py-1 font-weight-regular text--disabled"
-					:class="{'pl-3' : !isArabic, 'pr-3': isArabic}"
-				>
-					<a href="#installation" class="text-decoration-none">
-						<template v-if="isArabic">
-							التحميل
-						</template>
-						<template v-else>
-							Installation
-						</template>
-					</a>
-				</router-link>
-			</ul>
-		</v-navigation-drawer>
+		<content-thumbnail :links="links" />
 	</div>
 </template>
 

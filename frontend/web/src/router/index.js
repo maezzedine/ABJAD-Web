@@ -11,7 +11,6 @@ const routes = [
   },
   {
     path: '/:lang',
-    // name: 'Home',
     component: () => import('@/views/Home/Home.vue'),
     children: [
       {
@@ -37,6 +36,11 @@ const routes = [
         path: '/:lang/getting-started/first-program',
         name: 'FirstProgram',
         component: () => import ('@/views/GettingStarted/FirstProgram.vue')
+      },
+      {
+        path: '/:lang/documentation/variables',
+        name: 'Variables',
+        component: () => import ('@/views/Documentation/Variables/Variables.vue')
       },
     ]
   },

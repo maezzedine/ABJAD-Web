@@ -78,7 +78,20 @@ export default {
 					id: 15,
 					name: this.$store.getters.context['documentation'],
 					open: 'mdi-file-document',
-					close: 'mdi-file-document-outline'
+					close: 'mdi-file-document-outline',
+					children: [
+						{
+							id: 17,
+							name: this.$store.getters.context['variables'],
+							link: `/${this.$store.getters.lang}/documentation/variables`
+						},
+					]
+				},
+				{
+					id: 16,
+					name: this.$store.getters.context['running-abjad'],
+					open: 'mdi-play',
+					close: 'mdi-play-outline',
 				},
 				{
 					id: 19,
