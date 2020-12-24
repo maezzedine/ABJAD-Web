@@ -17,7 +17,7 @@ export default {
       ],
       linksFooter: { 
         prev: { path: `/${this.$route.params.lang}/documentation/constants`, ar: 'الثوابت', en: 'Constants' },
-        next: { path: ``, ar: '', en: '' },
+        next: { path: `/${this.$route.params.lang}/documentation/print`, ar: 'الكتابة', en: 'Printing' },
       }
     }
   },
