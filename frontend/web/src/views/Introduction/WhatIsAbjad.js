@@ -1,9 +1,10 @@
 import codeArea from '@/components/codeArea/codeArea.vue';
 import scroll from '@/services/scroll.js';
 import contentThumbnail from '@/components/contentThumbnail/contentThumbnail.vue';
+import footerLinks from '@/components/footerLinks/footerLinks.vue'
 
 export default {
-	components: { codeArea, contentThumbnail },
+	components: { codeArea, contentThumbnail, footerLinks },
 	data() {
 		return {
 			codes: [ 'أكتب ("مرحبا بالعالم!")؛' ],
@@ -13,7 +14,10 @@ export default {
 				{ id: 'abjad-is-arabic-programming-language', level: 3, ar: 'أبجد لغةُ برمجةٍ عربية', en: 'ABJAD is an Arabic Programming Language' },
 				{ id: 'abjad-is-scripting-language', level: 3, ar: 'أبجد لغةُ برمجةٍ نصية', en: 'ABJAD is a Scripting Language' },
 				{ id: 'abjad-is-interpreted-language', level: 3, ar: 'أبجد لغةُ برمجةٍ مُفسرة', en: 'ABJAD is an Interpreted Language' },
-			]
+			],
+			linksFooter: {
+				next: { path: `/${this.$route.params.lang}/introduction/why-abjad`, ar: 'لماذا أبجد؟', en: 'Why ABJAD?' },
+			}
 		}
 	},
 	created() {

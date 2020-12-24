@@ -1,9 +1,10 @@
 import codeArea from '@/components/codeArea/codeArea.vue';
 import scroll from '@/services/scroll.js';
 import contentThumbnail from '@/components/contentThumbnail/contentThumbnail.vue';
+import footerLinks from '@/components/footerLinks/footerLinks.vue'
 
 export default {
-	components: { codeArea, contentThumbnail },
+	components: { codeArea, contentThumbnail, footerLinks },
 	data() {
 		return {
 			codes: [ 'أكتب ("مرحبا بالعالم!")؛' ],
@@ -14,7 +15,11 @@ export default {
 				{ id: 'notepad-configuration', level: 3, ar: 'ضبط اتجاه الكتابة في المحرر', en: 'Configuring The Text Direction'},
 				{ id: 'hello-world-app', level: 2, ar: 'برنامج يكتب "مرحبا بالعالم!"', en: 'Hello World Program'},
 				{ id: 'running-app', level: 3, ar: 'تشغيل البرنامج', en: 'Running The Program'}
-			]
+			],
+			linksFooter: {
+				prev: { path: `/${this.$route.params.lang}/getting-started/installation`, ar: 'التحميل', en: 'Installation' },
+				// next: { path: `/${$route.params.lang}/documentation/variables`, ar: '', en: '' }
+			}
 		}
 	},
 	created() {

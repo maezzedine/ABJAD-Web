@@ -141,6 +141,7 @@
     </section>
 
     <content-thumbnail :links="links" />
+    <footer-links :links="linksFooter" />
   </div>
 </template>
 

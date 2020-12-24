@@ -1,9 +1,10 @@
 import codeArea from '@/components/codeArea/codeArea.vue';
 import scroll from '@/services/scroll.js';
 import contentThumbnail from '@/components/contentThumbnail/contentThumbnail.vue';
+import footerLinks from '@/components/footerLinks/footerLinks.vue'
 
 export default {
-  components: { codeArea, contentThumbnail },
+  components: { codeArea, contentThumbnail, footerLinks },
   data() {
     return {
       links: [
@@ -13,7 +14,11 @@ export default {
         { id: 'declaring-null-variable', level: 3, ar: 'تعريف متغير بدون قيمة', en: 'Declaring Variable Without a Value' },
         { id: 'using-variable', level: 2, ar: 'استخدام المتغير', en: 'Using a Variable' },
         { id: 'change-variable-value', level: 2, ar: 'تغير قيمة المتغير', en: 'Changing The Value of a Variable' },
-      ]
+      ],
+      linksFooter: {
+        prev: { path: ``, ar: '', en: ''},
+        next: { path: ``, ar: '', en: ''},
+      }
     }
   },
   created() {

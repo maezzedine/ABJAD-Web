@@ -22,37 +22,8 @@
 			The Phoenicians were the first people to discover the letters and use them to write, this is why, we gave our new 
 			programming language the honor of the name.
 		</p>
-		<hr />
-
-		<v-footer class="pt-6">
-			<div 
-				:class="{ 'ml-auto' : isArabic, 'mr-auto' : !isArabic}"
-			>
-				<v-icon>
-					{{isArabic? 'mdi-chevron-right': 'mdi-chevron-left'}}
-				</v-icon>
-				<router-link 
-					class="text-decoration-none text-h6"
-					:to="`/${$route.params.lang}/introduction/what-is-abjad`">
-					<template v-if="isArabic">ما هي <span class="abjad">أبجد</span>؟</template>
-					<template v-else>What is <span class="abjad">ABJAD</span>?</template>
-				</router-link>
-			</div>
-			
-			<div 
-				:class="{ 'mr-auto' : isArabic, 'ml-auto' : !isArabic}">
-				<router-link 
-					class="text-decoration-none text-h6"
-					:to="`/${$route.params.lang}/getting-started/installation`">
-					<template v-if="isArabic">التحميل</template>
-					<template v-else>Installation</template>
-				</router-link>
-				<v-icon>
-					{{isArabic? 'mdi-chevron-left': 'mdi-chevron-right'}}
-				</v-icon>
-			</div>
-		</v-footer>
 		
+		<footer-links :links="linksFooter" />
 		<content-thumbnail :links="links" />
 	</section>
 </template>
