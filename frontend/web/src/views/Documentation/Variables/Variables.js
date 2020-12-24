@@ -16,7 +16,7 @@ export default {
         { id: 'change-variable-value', level: 2, ar: 'تغير قيمة المتغير', en: 'Changing The Value of a Variable' },
       ],
       linksFooter: {
-        prev: { path: ``, ar: '', en: ''},
+        prev: { path: `/${this.$route.params.lang}/documentation/syntax`, ar: 'الصياغة', en: 'Syntax' },
         next: { path: ``, ar: '', en: ''},
       }
     }

@@ -42,6 +42,11 @@ const routes = [
         name: 'Variables',
         component: () => import ('@/views/Documentation/Variables/Variables.vue')
       },
+      {
+        path: '/:lang/documentation/syntax',
+        name: 'Syntax',
+        component: () => import ('@/views/Documentation/Syntax/Syntax.vue')
+      },
     ]
   },
 ]
