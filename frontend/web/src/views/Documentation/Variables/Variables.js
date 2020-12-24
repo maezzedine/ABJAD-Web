@@ -17,7 +17,7 @@ export default {
       ],
       linksFooter: {
         prev: { path: `/${this.$route.params.lang}/documentation/syntax`, ar: 'الصياغة', en: 'Syntax' },
-        next: { path: ``, ar: '', en: ''},
+        next: { path: `/${this.$route.params.lang}/documentation/constants`, ar: 'الثوابت', en: 'Constants' },
       }
     }
   },

@@ -1,5 +1,6 @@
 {
 	"about": "About",
+	"constants": "Constants",
 	"copy-complete": "Code copied to clipboard",
 	"dir": "ltr",
 	"documentation": "Documentation",
@@ -11,6 +12,7 @@
 	"online-editor": "Online Editor",
 	"running-abjad": "Running ABJAD Code",
 	"second-language": "العربية",
+	"syntax": "Syntax",
 	"variables": "Variables",
 	"what-is-abjad": "What is ABJAD?",
 	"why-abjad": "Why ABJAD?"

@@ -1,5 +1,6 @@
 {
 	"about": "عن أبجد",
+	"constants": "الثوابت",
 	"copy-complete": "تم نسخ محتوى الكود",
 	"dir": "rtl",
 	"documentation": "تعليمات",
@@ -11,6 +12,7 @@
 	"online-editor": "محول برمجي",
 	"running-abjad": "تشغيل كود أبجد",
 	"second-language": "English",
+	"syntax": "الصياغة",
 	"variables": "المتغيرات",
 	"what-is-abjad": "ما هي أبجد؟",
 	"why-abjad": "لماذا أبجد؟"

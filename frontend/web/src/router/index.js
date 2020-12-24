@@ -38,14 +38,19 @@ const routes = [
         component: () => import ('@/views/GettingStarted/FirstProgram.vue')
       },
       {
+        path: '/:lang/documentation/syntax',
+        name: 'Syntax',
+        component: () => import ('@/views/Documentation/Syntax/Syntax.vue')
+      },
+      {
         path: '/:lang/documentation/variables',
         name: 'Variables',
         component: () => import ('@/views/Documentation/Variables/Variables.vue')
       },
       {
-        path: '/:lang/documentation/syntax',
-        name: 'Syntax',
-        component: () => import ('@/views/Documentation/Syntax/Syntax.vue')
+        path: '/:lang/documentation/constants',
+        name: 'Constants',
+        component: () => import ('@/views/Documentation/Constants/Constants.vue')
       },
     ]
   },
