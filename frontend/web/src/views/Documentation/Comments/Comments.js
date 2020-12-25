@@ -14,7 +14,7 @@ export default {
       ],
       linksFooter: { 
         prev: { path: `/${this.$route.params.lang}/documentation/operations`, ar: 'العمليات الحسابية', en: 'Operations' },
-        // next: { path: `/${this.$route.params.lang}/documentation/constants`, ar: 'الثوابت', en: 'Constants' },
+        next: { path: `/${this.$route.params.lang}/documentation/conditionals`, ar: 'الشَّرطيات', en: 'Conditionals' },
       },
     }
   },

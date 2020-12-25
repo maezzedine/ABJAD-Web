@@ -72,6 +72,11 @@ const routes = [
         name: 'Comments',
         component: () => import ('@/views/Documentation/Comments/Comments.vue')
       },
+      {
+        path: '/:lang/documentation/conditionals',
+        name: 'Conditionals',
+        component: () => import ('@/views/Documentation/Conditionals/Conditionals.vue')
+      },
     ]
   },
 ]

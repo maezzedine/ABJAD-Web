@@ -3,6 +3,9 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import vuetify from './plugins/vuetify';
+import VueMermaid from 'vue-mermaid'
+
+Vue.use(VueMermaid);
 
 Vue.config.productionTip = false
 

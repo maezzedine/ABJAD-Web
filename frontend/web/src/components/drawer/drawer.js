@@ -72,9 +72,14 @@ export default {
 							link: `/${this.$store.getters.lang}/documentation/operations`
 						},
             {
-							id: 22,
+							id: 23,
 							name: this.$store.getters.context['comments'],
 							link: `/${this.$store.getters.lang}/documentation/comments`
+						},
+            {
+							id: 24,
+							name: this.$store.getters.context['conditionals'],
+							link: `/${this.$store.getters.lang}/documentation/conditionals`
 						},
 					]
 				},

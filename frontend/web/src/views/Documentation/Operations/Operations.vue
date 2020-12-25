@@ -62,7 +62,7 @@
                   <template v-else>Function</template>
                 </th>
                 <th class="col-2 py-2">
-                  <template v-if="isArabic">نوع الحصال</template>
+                  <template v-if="isArabic">نوع الحاصل</template>
                   <template v-else>Return Type</template>
                 </th>
                 <th class="col-3 py-2">
@@ -133,7 +133,7 @@
                   <template v-else>Function</template>
                 </th>
                 <th class="col-2 py-2">
-                  <template v-if="isArabic">نوع الحصال</template>
+                  <template v-if="isArabic">نوع الحاصل</template>
                   <template v-else>Return Type</template>
                 </th>
                 <th class="col-3 py-2">
@@ -190,7 +190,7 @@
                   <template v-else>Function</template>
                 </th>
                 <th class="col-2 py-2">
-                  <template v-if="isArabic">نوع الحصال</template>
+                  <template v-if="isArabic">نوع الحاصل</template>
                   <template v-else>Return Type</template>
                 </th>
                 <th class="col-3 py-2">
@@ -261,7 +261,7 @@
                   <template v-else>Function</template>
                 </th>
                 <th class="col-2 py-2">
-                  <template v-if="isArabic">نوع الحصال</template>
+                  <template v-if="isArabic">نوع الحاصل</template>
                   <template v-else>Return Type</template>
                 </th>
                 <th class="col-3 py-2">
