@@ -4,3 +4,8 @@
   font-size: x-small;
   vertical-align: top;
 }
+
+td {
+  height: unset !important;
+  overflow-wrap: break-word;
+}

@@ -62,6 +62,11 @@ const routes = [
         name: 'Print',
         component: () => import ('@/views/Documentation/Print/Print.vue')
       },
+      {
+        path: '/:lang/documentation/operations',
+        name: 'Operations',
+        component: () => import ('@/views/Documentation/Operations/Operations.vue')
+      },
     ]
   },
 ]

@@ -66,6 +66,11 @@ export default {
 							name: this.$store.getters.context['printing'],
 							link: `/${this.$store.getters.lang}/documentation/print`
 						},
+            {
+							id: 22,
+							name: this.$store.getters.context['operations'],
+							link: `/${this.$store.getters.lang}/documentation/operations`
+						},
 					]
 				},
 				{

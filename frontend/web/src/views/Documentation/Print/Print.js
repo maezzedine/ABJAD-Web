@@ -12,7 +12,7 @@ export default {
       ],
       linksFooter: { 
         prev: { path: `/${this.$route.params.lang}/documentation/types`, ar: 'الأنواع', en: 'Types' },
-        next: { path: ``, ar: '', en: '' },
+        next: { path: `/${this.$route.params.lang}/documentation/operations`, ar: 'العمليات', en: 'Operations' },
       }
     }
   },
