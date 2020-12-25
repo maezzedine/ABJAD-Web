@@ -67,6 +67,11 @@ const routes = [
         name: 'Operations',
         component: () => import ('@/views/Documentation/Operations/Operations.vue')
       },
+      {
+        path: '/:lang/documentation/comments',
+        name: 'Comments',
+        component: () => import ('@/views/Documentation/Comments/Comments.vue')
+      },
     ]
   },
 ]

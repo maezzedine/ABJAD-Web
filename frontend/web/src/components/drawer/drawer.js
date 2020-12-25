@@ -71,6 +71,11 @@ export default {
 							name: this.$store.getters.context['operations'],
 							link: `/${this.$store.getters.lang}/documentation/operations`
 						},
+            {
+							id: 22,
+							name: this.$store.getters.context['comments'],
+							link: `/${this.$store.getters.lang}/documentation/comments`
+						},
 					]
 				},
 				{
