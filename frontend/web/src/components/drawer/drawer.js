@@ -81,6 +81,11 @@ export default {
 							name: this.$store.getters.context['conditionals'],
 							link: `/${this.$store.getters.lang}/documentation/conditionals`
 						},
+            {
+							id: 24,
+							name: this.$store.getters.context['while-loop'],
+							link: `/${this.$store.getters.lang}/documentation/while-loop`
+						},
 					]
 				},
 				{

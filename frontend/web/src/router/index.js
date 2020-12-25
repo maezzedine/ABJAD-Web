@@ -77,6 +77,11 @@ const routes = [
         name: 'Conditionals',
         component: () => import ('@/views/Documentation/Conditionals/Conditionals.vue')
       },
+      {
+        path: '/:lang/documentation/while-loop',
+        name: 'WhileLoop',
+        component: () => import ('@/views/Documentation/WhileLoop/WhileLoop.vue')
+      },
     ]
   },
 ]

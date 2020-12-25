@@ -1,10 +1,13 @@
 <template>
 	<div class="app-code overflow-hidden v-sheet v-sheet--outlined theme--light rounded grey lighten-5" :dir="direction? direction : 'rtl'">
-		
 		<!-- Code goeas here -->
 		<pre class="language-bash">
-			<code v-for="code in codes" :key="code"
-				class="language-bash">{{code}}
+			<code v-for="(code, index) in codes" :key="code"
+				class="language-bash"
+			>
+				<span class="row">
+					<span class="counter" v-if="!direction || direction == 'rtl'">{{index + 1}}.</span> {{code}}
+				</span>
 			</code>
 		</pre>
 
@@ -77,18 +80,12 @@ export default {
 	}
 
 	.v-sheet.app-code code[class*=language], .v-sheet.app-code pre[class*=language] {
+		font-weight: normal;
 		background: none;
 		display: flex;
 		flex-direction: column;
-		font-family: Consolas,monospace;
-		font-weight: light;
 		font-size: 1rem;
-		-webkit-hyphens: none;
-		-ms-hyphens: none;
-		hyphens: none;
-		line-height: 1.5;
-		margin: 0;
-		padding: 0;
+		line-height: 1;
 		-moz-tab-size: 4;
 		tab-size: 4;
 		text-align: inherit;
@@ -97,10 +94,11 @@ export default {
 		word-break: normal;
 		word-spacing: normal;
 		word-wrap: normal;
-		color: $color-cyan-main;
+		color: rgb(104, 104, 104);
 	}
 
-	.content-stepper {
-		width: 256px;
+	.counter {
+		color: rgba(133, 56, 56, 0.65);
+		margin-left: 10px;
 	}
 </style>

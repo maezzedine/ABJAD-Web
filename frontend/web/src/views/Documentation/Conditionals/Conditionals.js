@@ -18,7 +18,7 @@ export default {
       ],
       linksFooter: { 
         prev: { path: `/${this.$route.params.lang}/documentation/comments`, ar: 'التعليقات', en: 'Comments' },
-        // next: { path: `/${this.$route.params.lang}/documentation/constants`, ar: 'الثوابت', en: 'Constants' },
+        next: { path: `/${this.$route.params.lang}/documentation/while-loop`, ar: 'حملقة طالما', en: 'While Loop' },
       },
       chartData: {
         ar: [
