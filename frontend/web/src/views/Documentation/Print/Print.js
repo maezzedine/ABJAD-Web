@@ -11,7 +11,7 @@ export default {
         { id: 'printing', level: 1, ar: 'الكتابة', en: 'Printing' },
       ],
       linksFooter: { 
-        prev: { path: `/${this.$route.params.lang}/documentation/types`, ar: 'الأنواع', en: 'Types' },
+        prev: { path: `/${this.$route.params.lang}/documentation/data-types`, ar: 'أنواع البيانات', en: 'Data Types' },
         next: { path: `/${this.$route.params.lang}/documentation/operations`, ar: 'العمليات', en: 'Operations' },
       }
     }

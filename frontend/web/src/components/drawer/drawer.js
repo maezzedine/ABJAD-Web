@@ -59,7 +59,7 @@ export default {
             {
 							id: 20,
 							name: this.$store.getters.context['types'],
-							link: `/${this.$store.getters.lang}/documentation/types`
+							link: `/${this.$store.getters.lang}/documentation/data-types`
 						},
             {
 							id: 21,

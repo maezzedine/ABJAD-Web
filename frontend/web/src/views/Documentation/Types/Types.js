@@ -14,6 +14,11 @@ export default {
         { id: 'boolean', level: 2, ar: 'منطقي', en: 'Boolean' },
         { id: 'user-defined-types', level: 2, ar: 'نوع مُحددٌ من قبل المُستخدم', en: 'User Defined Types' },
         { id: 'get-type', level: 2, ar: 'استخراج نوع القيمة', en: 'Get The Type of a Value' },
+        { id: 'converting', level: 2, ar: 'التحويل', en: 'Conversions' },
+        { id: 'number-to-string', level: 3, ar: 'من رقم إلى مقطع', en: 'Number to String' },
+        { id: 'string-to-number', level: 3, ar: 'من مقطع إلى رقم', en: 'String to Number' },
+        { id: 'bool-to-string', level: 3, ar: 'من منطقي إلى مقطع', en: 'Boolean to String' },
+        { id: 'string-to-bool', level: 3, ar: 'من مقطع إلى منطقي', en: 'String to Boolean' },
       ],
       linksFooter: { 
         prev: { path: `/${this.$route.params.lang}/documentation/constants`, ar: 'الثوابت', en: 'Constants' },

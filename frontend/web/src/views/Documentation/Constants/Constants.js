@@ -14,7 +14,7 @@ export default {
       ],
       linksFooter: { 
         prev: { path: `/${this.$route.params.lang}/documentation/variables`, ar: 'المتغيرات', en: 'Variables' },
-        next: { path: `/${this.$route.params.lang}/documentation/types`, ar: 'الأنواع', en: 'Types' },
+        next: { path: `/${this.$route.params.lang}/documentation/data-types`, ar: 'أنواع البيانات', en: 'Data Types' },
       }
     }
   },
