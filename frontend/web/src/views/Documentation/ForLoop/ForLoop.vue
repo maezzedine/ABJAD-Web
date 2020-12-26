@@ -4,7 +4,7 @@
       <a href="#for-loop"
         class="text-decoration-none text-right text-md-left">#</a>
       <template v-if="isArabic">
-        حلقة التكرير
+        حلقة التكرار
       </template>
       <template v-else>
         For Loop

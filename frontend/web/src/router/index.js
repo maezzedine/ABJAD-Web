@@ -87,6 +87,16 @@ const routes = [
         name: 'ForLoop',
         component: () => import ('@/views/Documentation/ForLoop/ForLoop.vue')
       },
+      {
+        path: '/:lang/documentation/function',
+        name: 'Function',
+        component: () => import ('@/views/Documentation/Function/Function.vue')
+      },
+      {
+        path: '/:lang/documentation/class',
+        name: 'Class',
+        component: () => import ('@/views/Documentation/Class/Class.vue')
+      },
     ]
   },
 ]

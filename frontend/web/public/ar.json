@@ -1,5 +1,6 @@
 {
 	"about": "عن أبجد",
+	"class": "الملف",
 	"comments": "التعليقات",
 	"conditionals": "الشَّرطيات",
 	"constants": "الثوابت",
@@ -7,7 +8,8 @@
 	"dir": "rtl",
 	"documentation": "تعليمات",
 	"first-program": "أول برنامج",
-	"for-loop": "حلقة التكرير",
+	"for-loop": "حلقة التكرار",
+	"function": "الدالّة",
 	"getting-started": "البداية",
 	"installation": "تحميل",
 	"introduction": "المقدمة",

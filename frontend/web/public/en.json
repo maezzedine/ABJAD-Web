@@ -1,5 +1,6 @@
 {
 	"about": "About",
+	"class": "Class",
 	"comments": "Comments",
 	"conditionals": "Conditionals",
 	"constants": "Constants",
@@ -8,6 +9,7 @@
 	"documentation": "Documentation",
 	"first-program": "First Program",
 	"for-loop": "For Loop",
+	"function": "Function",
 	"getting-started": "Getting Started",
 	"installation": "Installation",
 	"introduction": "Introduction",

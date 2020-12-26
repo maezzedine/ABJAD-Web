@@ -91,6 +91,16 @@ export default {
 							name: this.$store.getters.context['for-loop'],
 							link: `/${this.$store.getters.lang}/documentation/for-loop`
 						},
+            {
+							id: 26,
+							name: this.$store.getters.context['function'],
+							link: `/${this.$store.getters.lang}/documentation/function`
+						},
+            {
+							id: 26,
+							name: this.$store.getters.context['class'],
+							link: `/${this.$store.getters.lang}/documentation/class`
+						},
 					]
 				},
 				{

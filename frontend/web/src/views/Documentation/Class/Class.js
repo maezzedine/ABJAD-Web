@@ -8,19 +8,13 @@ export default {
   data() {
     return {
       links: [
-        { id: 'for-loop', level: 1, ar: 'حلقة التكرار', en: 'For Loop' },
-        { id: 'syntax', level: 2, ar: 'الصياغة', en: 'Syntax' },
-        { id: 'example', level: 2, ar: 'مثال', en: 'Example' },
+        { id: 'class', level: 1, ar: 'الملف', en: 'Class' },
       ],
       linksFooter: { 
-        prev: { path: `/${this.$route.params.lang}/documentation/while-loop`, ar: 'حلقة طالما', en: 'While Loop' },
-        next: { path: `/${this.$route.params.lang}/documentation/function`, ar: 'الدالّة', en: 'Function' },
+        prev: { path: `/${this.$route.params.lang}/documentation/function`, ar: 'الدالّة', en: 'Function' },
+        // next: { path: `/${this.$route.params.lang}/documentation/class`, ar: 'الملف', en: 'Class' },
       },
-      codes: [
-        'كرر (متغير س=0؛ س<10؛ س++) {',
-        '   أكتب(س)؛',
-        '}',
-      ]
+      codes: []
     }
   },
   created() {
@@ -33,7 +27,7 @@ export default {
   },
   methods: {
     setTitle() {
-      window.document.title = (this.isArabic)? 'أبجد - حلقة التكرار' : 'ABJAD - For Loop';
+      window.document.title = (this.isArabic)? 'أبجد - الدالّة' : 'ABJAD - Function';
     },
     anchorHashCheck() {
       scroll.anchorHashCheck(this);
