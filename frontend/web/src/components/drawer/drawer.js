@@ -108,6 +108,7 @@ export default {
 					name: this.$store.getters.context['running-abjad'],
 					open: 'mdi-play',
 					close: 'mdi-play-outline',
+					link: `/${this.$store.getters.lang}/running-code`
 				},
 				{
 					id: 19,

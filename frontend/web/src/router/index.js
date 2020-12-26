@@ -97,6 +97,11 @@ const routes = [
         name: 'Class',
         component: () => import ('@/views/Documentation/Class/Class.vue')
       },
+      {
+        path: '/:lang/running-code',
+        name: 'RunningCode',
+        component: () => import ('@/views/RunningCode/RunningCode.vue')
+      },
     ]
   },
 ]

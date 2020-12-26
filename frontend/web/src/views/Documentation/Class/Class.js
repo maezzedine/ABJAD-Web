@@ -18,7 +18,7 @@ export default {
       ],
       linksFooter: { 
         prev: { path: `/${this.$route.params.lang}/documentation/function`, ar: 'الدالّة', en: 'Function' },
-        // next: { path: `/${this.$route.params.lang}/documentation/class`, ar: 'الملف', en: 'Class' },
+        next: { path: `/${this.$route.params.lang}/running-code`, ar: 'تشغيل برنامج أبجد', en: 'Running ABJAD Code' },
       },
       codes: {
         ex1: [

@@ -91,6 +91,63 @@
           </template>
         </v-simple-table>
       </section>
+      <section id="unary-numbers-oper" class="page-body mt-10 mb-5">
+        <h2 class="v-heading text-h6 text-sm-h6 mb-3">
+          <a href="#unary-numbers-oper"
+            class="text-decoration-none text-right text-md-left">#</a>
+          <template v-if="isArabic">
+            العمليات الأحادية
+          </template>
+          <template v-else>
+            Unary Operations
+          </template>
+        </h2>
+        <v-simple-table>
+          <template v-slot:default>
+            <thead>
+              <tr class="row ma-0">
+                <th class="col-2 py-2">
+                  <template v-if="isArabic">الرمز</template>
+                  <template v-else>Operation</template>
+                </th>
+                <th class="col-2 py-2">
+                  <template v-if="isArabic">اسم العملية</template>
+                  <template v-else>Name</template>
+                </th>
+                <th class="col-3 py-2">
+                  <template v-if="isArabic">الوظيفة</template>
+                  <template v-else>Function</template>
+                </th>
+                <th class="col-2 py-2">
+                  <template v-if="isArabic">نوع الحاصل</template>
+                  <template v-else>Return Type</template>
+                </th>
+                <th class="col-3 py-2">
+                  <template v-if="isArabic">مثال</template>
+                  <template v-else>Example</template>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="row ma-0"
+                v-for="oper in operations.numbers.unary"
+                :key="oper.id"  
+              >
+                <td class="col-2 py-2 py-2">{{oper.sign}}</td>
+                <td class="col-2 py-2">{{oper[$store.getters.lang].name}}</td>
+                <td class="col-3 py-2">{{oper[$store.getters.lang].function}}</td>
+                <td class="col-2 py-2">{{oper[$store.getters.lang].return_type}}</td>
+                <td class="col-3 py-2" dir="rtl">
+                  <code v-for="line in oper.example" :key="line">
+                    {{line}} <br />
+                  </code>
+                </td>
+              </tr>
+            </tbody>
+          </template>
+        </v-simple-table>
+      </section>
     </section>
 
     <section id="boolean" class="page-body mt-10 mb-5">

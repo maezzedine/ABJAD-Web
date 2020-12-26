@@ -10,6 +10,7 @@ export default {
         { id: 'operations', level: 1, ar: 'العمليات', en: 'Operations' },
         { id: 'numbers', level: 2, ar: 'العمليات الحسابية على الأرقام', en: 'Numbers Operations' },
         { id: 'binary-numbers-oper', level: 3, ar: 'العمليات الثنائية', en: 'Binary Operations' },
+        { id: 'unary-numbers-oper', level: 3, ar: 'العمليات الأحادية', en: 'Unary Operations' },
         { id: 'boolean', level: 2, ar: 'العمليات الحسابية على الشروط', en: 'Boolean Operations' },
         { id: 'binary-boolean-oper', level: 3, ar: 'العمليات الثنائية', en: 'Binary Operations' },
         { id: 'unary-boolean-oper', level: 3, ar: 'العمليات الأحادية', en: 'Unary Operations' },
@@ -82,6 +83,66 @@ export default {
                 function: 'Divides two numbers and returns the result',
                 return_type: 'Number'
               }
+            },
+            { 
+              id: 24, 
+              sign: '+=',
+              example: ['متغير عداد = 1؛', 'عداد+= 4؛'],
+              ar: {
+                name: 'إضافة رقم', 
+                function: 'تضيف رقم على الرقم الأصلي',
+                return_type: 'لا شيئ'
+              },
+              en: {
+                name: 'Add a number', 
+                function: 'Adds a number to the original one',
+                return_type: 'void'
+              },
+            },
+            { 
+              id: 25, 
+              sign: '-=',
+              example: ['متغير عداد = 1؛', 'عداد-= 4؛'],
+              ar: {
+                name: 'طرح رقم', 
+                function: 'تطرح رقم من الرقم الأصلي',
+                return_type: 'لا شيئ'
+              },
+              en: {
+                name: 'Subtract a number', 
+                function: 'Subtracts a number from the original one',
+                return_type: 'void'
+              },
+            },
+            { 
+              id: 26, 
+              sign: '*=',
+              example: ['متغير عداد = 3؛', 'عداد*= 4؛'],
+              ar: {
+                name: 'ضرب برقم', 
+                function: 'تضرب الرقم الأصلي برقم آخر',
+                return_type: 'لا شيئ'
+              },
+              en: {
+                name: 'Multiply a number', 
+                function: 'Multiplies the original number by another one',
+                return_type: 'void'
+              },
+            },
+            { 
+              id: 27, 
+              sign: '\\=',
+              example: ['متغير عداد = 12؛', 'عداد\\= 4؛'],
+              ar: {
+                name: 'تقسم على رقم', 
+                function: 'تقسم الرقم الأصلي على رقم آخر',
+                return_type: 'لا شيئ'
+              },
+              en: {
+                name: 'Divide by a number', 
+                function: 'Divides the original number by another one',
+                return_type: 'void'
+              },
             },
             { 
               id: 5, 
@@ -172,6 +233,38 @@ export default {
                 function: 'Checks if the first number is not equal to the second and returns the result',
                 return_type: 'Boolean'
               }
+            }
+          ],
+          unary: [
+            { 
+              id: 23, 
+              sign: '++',
+              example: ['متغير عداد = 1؛', 'عداد++؛'],
+              ar: {
+                name: 'إضافة واحد', 
+                function: 'تضيف على العدد واحد',
+                return_type: 'لا شيئ'
+              },
+              en: {
+                name: 'Increment by 1', 
+                function: 'Increments a number by one',
+                return_type: 'void'
+              },
+            },
+            { 
+              id: 24, 
+              sign: '--',
+              example: ['متغير عداد = 1؛', 'عداد--؛'],
+              ar: {
+                name: 'طرح واحد', 
+                function: 'تطرح من العدد واحد',
+                return_type: 'لا شيئ'
+              },
+              en: {
+                name: 'Decrement by 1', 
+                function: 'Decrements a number by one',
+                return_type: 'void'
+              },
             }
           ]
         },
