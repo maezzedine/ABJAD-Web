@@ -9,12 +9,42 @@ export default {
     return {
       links: [
         { id: 'class', level: 1, ar: 'الملف', en: 'Class' },
+        { id: 'syntax', level: 2, ar: 'الصياغة', en: 'Syntax' },
+        { id: 'defining-class', level: 3, ar: 'تعريف ملف', en: 'Defining a Class' },
+        { id: 'defining-class-example', level: 4, ar: 'مثال', en: 'Example' },
+        { id: 'instantiating-class', level: 3, ar: 'إنشاء قيمة من نوع ملف', en: 'Instantiating a Class' },
+        { id: 'instantiating-class-example', level: 4, ar: 'مثال', en: 'Example' },
+        { id: 'accessing-fields-and-functions', level: 3, ar: 'الوصول إلى خصائص ودالات الملف', en: "Accessing a Class's fields and functions" },
       ],
       linksFooter: { 
         prev: { path: `/${this.$route.params.lang}/documentation/function`, ar: 'الدالّة', en: 'Function' },
         // next: { path: `/${this.$route.params.lang}/documentation/class`, ar: 'الملف', en: 'Class' },
       },
-      codes: []
+      codes: {
+        ex1: [
+          'صنف إنسان {',
+          '	متغير إسم_أول = عدم؛',
+          '	متغير إسم_أخير = عدم؛',
+          '	متغير عمر = عدم؛',
+          '	دالة إنسان(إسم، عائلة، _عمر) {',
+          '		إسم_أول = إسم؛',
+          '		إسم_أخير = عائلة؛',
+          '		عمر = _عمر؛',
+          '	}',
+          '	دالة تعديل_العمر(جديد) {',
+          '		عمر = جديد؛',
+          '	}',
+          '}',
+        ],
+        ex2: [
+          'متغير محمد = انشئ إنسان("محمد"، "عزالدين"، 20)؛',
+        ],
+        ex3: [
+          'أكتب(محمد.إسم_أول)؛',
+          'محمد.تعديل_العمر(محمد.عمر + 1)؛',
+          'أكتب(محمد.عمر)؛',
+        ]
+      }
     }
   },
   created() {
