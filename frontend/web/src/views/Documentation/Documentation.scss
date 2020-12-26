@@ -9,3 +9,10 @@ td {
   height: unset !important;
   overflow-wrap: break-word;
 }
+
+.v-application ol, .v-application ul {
+  &:lang(ar) {
+    padding-right: 24px;
+    padding-left: 0;
+  }
+}

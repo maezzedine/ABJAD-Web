@@ -15,7 +15,7 @@ export default {
       ],
       linksFooter: { 
         prev: { path: `/${this.$route.params.lang}/documentation/conditionals`, ar: 'الشَّرطيات', en: 'Conditionals' },
-        // next: { path: `/${this.$route.params.lang}/documentation/constants`, ar: 'الثوابت', en: 'Constants' },
+        next: { path: `/${this.$route.params.lang}/documentation/for-loop`, ar: 'حلقة التكرير', en: 'For Loop' },
       },
       codes: [
         'متغير عداد = 1؛',

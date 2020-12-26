@@ -82,6 +82,11 @@ const routes = [
         name: 'WhileLoop',
         component: () => import ('@/views/Documentation/WhileLoop/WhileLoop.vue')
       },
+      {
+        path: '/:lang/documentation/for-loop',
+        name: 'ForLoop',
+        component: () => import ('@/views/Documentation/ForLoop/ForLoop.vue')
+      },
     ]
   },
 ]
