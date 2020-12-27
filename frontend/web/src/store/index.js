@@ -7,7 +7,8 @@ export default new Vuex.Store({
   state: {
     language: '',
     arabic: {},
-    english: {}
+    english: {},
+    code: '',
   },
   getters: {
     lang: state => {
@@ -15,6 +16,9 @@ export default new Vuex.Store({
     },
     context: state => {
       return (state.language === 'ar')? state.arabic : state.english;
+    },
+    code: state => {
+      return state.code;
     }
   },
   mutations: {
@@ -26,6 +30,9 @@ export default new Vuex.Store({
     },
     setEnglishFile(state, file) {
       state.english = file;
+    },
+    setCode(state, code) {
+      state.code = code;
     }
   },
   actions: {
@@ -42,6 +49,9 @@ export default new Vuex.Store({
     },
     setEnglishFile(context, file) {
       context.commit('setEnglishFile', file);
+    },
+    setCode(context, code) {
+      context.commit('setCode', code);
     }
   },
   modules: {

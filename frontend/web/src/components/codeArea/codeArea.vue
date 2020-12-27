@@ -1,5 +1,41 @@
 <template>
 	<div class="code-container">
+		<!-- Copy button -->
+		<v-btn-toggle 
+			v-if="!editable"
+		 	dense class="mt-4"
+		>
+			<v-tooltip bottom>
+				<template v-slot:activator="{ on, attrs }">
+					<v-btn type="button" 
+						text icon
+						v-bind="attrs" v-on="on"
+						@click="copyCode()"
+						:class="{ 'v-btn--left': !direction || direction == 'rtl', 'v-btn--right': direction == 'ltr'}"
+					>
+						<v-icon color="grey">mdi-content-copy</v-icon>
+					</v-btn>
+				</template>
+				<span>
+					<template v-if="isArabic">إنسخ الكود</template>
+					<template v-else>Copy Code</template>
+				</span>
+			</v-tooltip>
+
+			<v-btn
+				text
+				:class="{ 'v-btn--left': !direction || direction == 'rtl', 'v-btn--right': direction == 'ltr'}"
+			>
+				<router-link 
+					@click.native="setSessionCode(code)"
+					class="text-decoration-none grey--text text--darken-1" :to="`/${$route.params.lang}/editor`"
+				>
+					<template v-if="isArabic">جرّبه</template>
+					<template v-else>Try it</template>
+				</router-link>
+			</v-btn>
+		</v-btn-toggle>
+
 		<prism-editor 
 			v-if="!direction || direction == 'rtl'"
       class="my-editor" 
@@ -14,22 +50,6 @@
 				{{code}}
 			</code>
 		</div>
-		
-		<!-- Copy button -->
-		<button type="button" 
-			v-if="!editable"
-			@click="copyCode()"
-			class="mt-n3 v-btn v-btn--absolute v-btn--flat v-btn--icon v-btn--round v-btn--top theme--light v-size--default" 
-			:class="{ 'v-btn--left': !direction || direction == 'rtl', 'v-btn--right': direction == 'ltr'}"
-		>
-			<span class="v-btn__content">
-				<span aria-hidden="true" class="v-icon notranslate theme--light grey--text">
-					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true" class="v-icon__svg">
-						<path d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path>
-					</svg>
-				</span>
-			</span>
-		</button>
 
 
 		<!-- Snackbar for inforoming about copy completion -->

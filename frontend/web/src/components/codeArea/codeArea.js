@@ -49,8 +49,16 @@ export default {
       }
     }
   }),
+  computed: {
+    isArabic() {
+      return this.$store.getters['lang'] == 'ar';
+    },
+    storeCode() {
+      return this.$store.getters.code;
+    }
+  },
   mounted() {
-		this.code = this.codes.reduce((p, c) => p + "\n" + c);
+    this.fillCode();
 	},
 	methods: {
     highlighter(code) {
@@ -60,6 +68,40 @@ export default {
 			navigator.clipboard.writeText(this.code);
 			this.text = this.$store.getters.context['copy-complete'];
 			this.snackbar = true;
-		}
-	}
+    },
+    updateCode() {
+      if (this.editable) {
+        this.$emit("code-change", this.code);
+      }
+    },
+    setSessionCode(code) {
+      // console.log('set');
+      this.$store.commit("setCode", code);
+      // sessionStorage.setItem("abjad-code", code);
+    },
+    fillCode() {
+      if (this.codes) {
+        this.code = this.codes.reduce((p, c) => p + "\n" + c);
+      } else {
+        // var codesFromSession = sessionStorage.getItem("abjad-code");
+        var codesFromSession = this.$store.getters.code;
+        console.log(codesFromSession);
+        if (codesFromSession) {
+          this.code = codesFromSession;
+        }
+      }
+    }
+  },
+  watch: {
+    code: function () {
+      this.updateCode();
+    },
+    $route: function () {
+      this.fillCode();
+    },
+    storeCode:  function() {
+      this.fillCode();
+    }
+  }
+
 }

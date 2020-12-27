@@ -1,7 +1,22 @@
+var URL = process.env.VUE_APP_API;
+
 export class Api {
+
     async getLocalFile(name) {
         var response = await fetch(`/${name}`);
         return response.json();
+    }
+
+    async interpret(code) {
+        var response = await fetch(`${URL}/interpreter`, {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(code)
+        });
+
+        return response;
     }
 }
 
