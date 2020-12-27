@@ -10,12 +10,17 @@
 		<abjad-logo />
 
 		<v-spacer></v-spacer>
-		<v-btn
-			elevation="0"
-			tile
+		<router-link
+			:to="`/${this.$route.params.lang}/editor`"
+			class="text-decoration-none"
 		>
-			{{$store.getters.context['online-editor']}}
-		</v-btn>
+			<v-btn
+				elevation="0"
+				tile
+			>
+				{{$store.getters.context['online-editor']}}
+			</v-btn>
+		</router-link>
 		<v-divider
 			inset
 			vertical

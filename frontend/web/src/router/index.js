@@ -102,6 +102,11 @@ const routes = [
         name: 'RunningCode',
         component: () => import ('@/views/RunningCode/RunningCode.vue')
       },
+      {
+        path: '/:lang/editor',
+        name: 'Editor',
+        component: () => import ('@/views/Editor/Editor.vue')
+      },
     ]
   },
 ]

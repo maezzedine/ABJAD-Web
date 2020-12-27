@@ -30,7 +30,6 @@ export default {
 							name: this.$store.getters.context['first-program'],
 							link: `/${this.$store.getters.lang}/getting-started/first-program`
 						},
-						{ id: 10, name: this.$store.getters.context['online-editor'] },
 					],
 					open: 'mdi-speedometer',
 					close: 'mdi-speedometer-medium'
@@ -109,6 +108,12 @@ export default {
 					open: 'mdi-play',
 					close: 'mdi-play-outline',
 					link: `/${this.$store.getters.lang}/running-code`
+				},
+				{ 
+					id: 10, 
+					name: this.$store.getters.context['online-editor'],
+					link: `/${this.$store.getters.lang}/editor`,
+					close: 'mdi-code-braces'
 				},
 				{
 					id: 19,

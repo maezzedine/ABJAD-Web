@@ -1,0 +1,187 @@
+@import '@/styles/_headings';
+
+.code-container {
+  position: relative;
+
+  .abjad-bash {
+    margin: 16px 0;
+    min-height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: #ccc;
+    background: rgb(42, 42, 42) !important;
+
+    code {
+        background: none;
+        color: inherit;
+        margin-left: 10px;
+        position: relative;
+        white-space: pre;
+    
+        &::before {
+          content: '>';
+          position: absolute;
+          left: -2px;
+          color: #808080;
+        }
+      }
+  }
+
+  .my-editor {
+    background: #faf9f9;
+    color: #ccc;
+    direction: rtl !important;
+
+    font-family: Fira code, Fira Mono, Consolas, Menlo, Courier, monospace;
+    font-size: 15px;
+    line-height: 2;
+    padding: 5px;
+    box-shadow: 1px 1px 2px 1px ;
+    
+    &:not(.read-only) {
+      min-height: 300px;
+      max-height: 50vh;
+    }
+
+    .prism-editor__textarea {
+      direction: rtl !important;
+    }
+
+    .prism-editor__container {
+      direction: rtl !important;
+      text-align: right !important;
+    }
+
+    .prism-editor__textarea:focus {
+      outline: none;
+    }
+
+    .prism-editor__editor {
+      color: black !important; 
+    }
+
+    pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+    code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+      background: #6b747a;
+    }
+
+    pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+    code[class*="language-"]::selection, code[class*="language-"] ::selection {
+      background: #C1DEF1;
+    }
+
+    .token.prism-editor__line-number {
+      color: #c0c0c0 !important;
+      font-style: unset !important;
+      line-height: 2;
+      font-size: 15px;
+      margin-left: 30px;
+    }
+
+    .token.comment,
+    .token.prolog,
+    .token.doctype,
+    .token.cdata {
+      color: #999898;
+    }
+
+
+    .token.string {
+      color: #259c65;
+      // color: #109287;
+    }
+
+    .token.punctuation,
+    .token.operator {
+      color: #393A34; /* no highlight */
+    }
+
+    .token.url,
+    .token.symbol,
+    .token.number,
+    .token.boolean,
+    .token.variable,
+    .token.constant,
+    .token.inserted {
+      color: #36acaa;
+    }
+
+    .token.atrule,
+    .token.keyword,
+    .token.attr-value,
+    .language-autohotkey .token.selector,
+    .language-json .token.boolean,
+    .language-json .token.number,
+    code[class*="language-css"] {
+      color: #0000ff;
+    }
+
+    .token.function {
+      color: #9a050f;
+    }
+
+    .token.deleted,
+    .language-autohotkey .token.tag {
+      color: #9a050f;
+    }
+
+    .token.selector,
+    .language-autohotkey .token.keyword {
+      color: #00009f;
+    }
+
+    .token.important,
+    .token.bold {
+      font-weight: bold;
+    }
+
+    .token.italic {
+      font-style: italic;
+    }
+
+    .token.class-name,
+    .language-json .token.property {
+      color: #2B91AF;
+    }
+
+    .token.tag,
+    .token.selector {
+      color: #800000;
+    }
+
+    .token.attr-name,
+    .token.property,
+    .token.regex,
+    .token.entity {
+      color: #ff0000;
+    }
+
+    .token.directive.tag .tag {
+      background: #ffff00;
+      color: #393A34;
+    }
+
+    /* overrides color-values for the Line Numbers plugin
+    * http://prismjs.com/plugins/line-numbers/
+    */
+    .line-numbers .line-numbers-rows {
+      border-right-color: #a5a5a5;
+      // border-right: 1px solid black;
+    }
+
+    .line-numbers-rows > span:before {
+      color: #2B91AF;
+    }
+
+    /* overrides color-values for the Line Highlight plugin
+    * http://prismjs.com/plugins/line-highlight/
+    */
+    .line-highlight {
+      background: rgba(193, 222, 241, 0.2);
+      background: -webkit-linear-gradient(left, rgba(193, 222, 241, 0.2) 70%, rgba(221, 222, 241, 0));
+      background: linear-gradient(to right, rgba(193, 222, 241, 0.2) 70%, rgba(221, 222, 241, 0));
+    }
+  }
+}

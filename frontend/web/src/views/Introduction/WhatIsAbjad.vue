@@ -89,12 +89,11 @@
 					<p v-if="isArabic">
 						أقصر برنامجٍ يُمكن كتابتُه باستخدام <span class="abjad">أبجد</span>، يقوم بكتابة عبارة
 						"مرحبا بالعالم!" على الشاشة:
-						<code-area :codes=codes />
 					</p>
 					<p v-else>
 						The shortest <span class="abjad">ABJAD</span> code, that prints "Hello World! (In Arabic)" is:
-						<code-area :codes=codes />
 					</p>
+					<code-area  :codes=codes />
 			</section>
 
 			<section id="abjad-is-interpreted-language">
