@@ -11,7 +11,6 @@
 			activatable
 			transition
 			:items="items"
-			:open="initiallyOpen"
 			item-key="name"
 		>
 			<template slot="label" slot-scope="props">

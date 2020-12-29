@@ -1,9 +1,9 @@
 export default {
 	name: 'Drawer',
 	computed: {
-		initiallyOpen() {
-			return [this.$store.getters.context['introduction']];
-		},
+		// initiallyOpen() {
+		// 	return [this.$store.getters.context['introduction']];
+		// },
 		items() {
 			return [
 				{
@@ -91,12 +91,12 @@ export default {
 							link: `/${this.$store.getters.lang}/documentation/for-loop`
 						},
             {
-							id: 26,
+							id: 27,
 							name: this.$store.getters.context['function'],
 							link: `/${this.$store.getters.lang}/documentation/function`
 						},
             {
-							id: 26,
+							id: 28,
 							name: this.$store.getters.context['class'],
 							link: `/${this.$store.getters.lang}/documentation/class`
 						},
@@ -115,9 +115,34 @@ export default {
 					link: `/${this.$store.getters.lang}/editor`,
 					close: 'mdi-code-braces'
 				},
+				{ 
+					id: 29, 
+					name: this.$store.getters.context['sample-codes'],
+					open: 'mdi-file-code',
+					close: 'mdi-file-code-outline',
+					children: [
+						{
+							id: 31, 
+							name: this.$store.getters.context['even-odd'],
+							link: `/${this.$store.getters.lang}/sample-codes/even-odd`,
+						},
+						{
+							id: 30, 
+							name: this.$store.getters.context['prime-numbers'],
+							link: `/${this.$store.getters.lang}/sample-codes/prime-numbers`,
+						},
+						{
+							id: 30, 
+							name: this.$store.getters.context['sum-numbers'],
+							link: `/${this.$store.getters.lang}/sample-codes/sum-numbers`,
+						}
+					]
+				},
 				{
 					id: 19,
-					name: this.$store.getters.context['about']
+					name: this.$store.getters.context['about'],
+					link: `/${this.$route.params.lang}/about`,
+					close: 'mdi-information-variant'
 				},
 			];
 		}

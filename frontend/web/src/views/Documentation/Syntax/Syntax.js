@@ -10,7 +10,7 @@ export default {
         { id: 'syntax', level: 1, ar: 'الصياغة', en: 'Syntax' }
       ],
       linksFooter: { 
-        prev: { path: ``, ar: '', en: '' },
+        prev: { path: `/${this.$route.params.lang}/getting-started/first-program`, ar: 'أول برنامج', en: 'First Program' },
         next: { path: `/${this.$route.params.lang}/documentation/variables`, ar: 'المتغيرات', en: 'Variables' },
       }
     }

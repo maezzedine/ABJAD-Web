@@ -8,13 +8,14 @@ export default {
   data() {
     return {
       links: [
-        { id: 'class', level: 1, ar: 'الملف', en: 'Class' },
+        { id: 'class', level: 1, ar: 'الصنف', en: 'Class' },
         { id: 'syntax', level: 2, ar: 'الصياغة', en: 'Syntax' },
-        { id: 'defining-class', level: 3, ar: 'تعريف ملف', en: 'Defining a Class' },
+        { id: 'defining-class', level: 3, ar: 'تعريف صنف', en: 'Defining a Class' },
         { id: 'defining-class-example', level: 4, ar: 'مثال', en: 'Example' },
-        { id: 'instantiating-class', level: 3, ar: 'إنشاء قيمة من نوع ملف', en: 'Instantiating a Class' },
+        { id: 'instantiating-class', level: 3, ar: 'إنشاء قيمة من صنف', en: 'Instantiating a Class' },
         { id: 'instantiating-class-example', level: 4, ar: 'مثال', en: 'Example' },
-        { id: 'accessing-fields-and-functions', level: 3, ar: 'الوصول إلى خصائص ودالات الملف', en: "Accessing a Class's fields and functions" },
+        { id: 'accessing-fields-and-functions', level: 3, ar: 'الوصول إلى خصائص ودالات الصنف', en: "Accessing a Class's fields and functions" },
+        { id: 'getters-setters', level: 4, ar: 'الحواصل والمُعدّلات', en: "Getters and Setters" },
       ],
       linksFooter: { 
         prev: { path: `/${this.$route.params.lang}/documentation/function`, ar: 'الدالّة', en: 'Function' },
@@ -40,9 +41,28 @@ export default {
           'متغير محمد = انشئ إنسان("محمد"، "عزالدين"، 20)؛',
         ],
         ex3: [
-          'أكتب(محمد.إسم_أول)؛',
-          'محمد.تعديل_العمر(محمد.عمر + 1)؛',
-          'أكتب(محمد.عمر)؛',
+          'محمد.تعديل_العمر(22)؛',
+        ],
+        ex4: [
+          'صنف إنسان {',
+          '	متغير إسم_أول = عدم؛',
+          '	متغير إسم_أخير = عدم؛',
+          '	متغير عمر = عدم؛',
+          '	دالة إنسان(إسم، عائلة، _عمر) {',
+          '		إسم_أول = إسم؛',
+          '		إسم_أخير = عائلة؛',
+          '		عمر = _عمر؛',
+          '	}',
+          '	دالة تعديل_العمر(جديد) {',
+          '		عمر = جديد؛',
+          '	}',
+          '	دالة تحصيل_العمر() {',
+          '		أرجع عمر؛',
+          '	}',
+          '}',
+          'متغير محمد = انشئ إنسان("محمد"، "عزالدين"، 20)؛',
+          'محمد.تعديل_العمر(22)؛',
+          'أكتب(محمد.تحصيل_العمر())؛',
         ]
       }
     }
@@ -57,7 +77,7 @@ export default {
   },
   methods: {
     setTitle() {
-      window.document.title = (this.isArabic)? 'أبجد - الدالّة' : 'ABJAD - Function';
+      window.document.title = (this.isArabic)? 'أبجد - الصنف' : 'ABJAD - Class';
     },
     anchorHashCheck() {
       scroll.anchorHashCheck(this);

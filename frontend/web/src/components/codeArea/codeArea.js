@@ -25,7 +25,7 @@ export default {
           punctuation: /[.\\]/
         },
         lookbehind: true,
-        pattern: /((?:(?:ملف|آنشئ|إنشئ|أنشئ|انشئ)\s+)|(?:catch\s+\())[\w.\\]+/i
+        pattern: /((?:(?:صنف|آنشئ|إنشئ|أنشئ|انشئ)\s+)|(?:catch\s+\())[\w.\\]+/i
       },
       comment: [ 
         {
@@ -37,9 +37,9 @@ export default {
       function: /[_$a-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?=\s*\()/i,
       'function-variable': {
         alias: 'دالة',
-        pattern: /[_$a-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*(?=\s*=\s*(?:دالة\b|(?:\([^()]*\)|[_$a-z\xA0-\uFFFF][$\w\xA0-\uFFFF]*)\s*=>))/i
+        pattern: /[_$a-z\xA0-\uFFFF][$\w\xA0-\uFFFF_]*(?=\s*=\s*(?:دالة\b|(?:\([^()]*\)|[_$a-z\xA0-\uFFFF][$\w\xA0-\uFFFF_]*)\s*=>))/i
       },
-      keyword: /(متغير|ثابت|ملف|دالة|إذا|وإلا|أرجع|ارجع|والا|عدم|طالما|كرر|كرّر|نوع|رقم|مقطع|منطقي|اكتب|أكتب|انشئ|أنشئ|إنشئ|صحيح|خطأ)/,
+      keyword: /(متغير|ثابت|صنف|دالة|إذا|وإلا|أرجع|ارجع|والا|عدم|طالما|كرر|كرّر|نوع|رقم|مقطع|منطقي|اكتب|أكتب|انشئ|أنشئ|إنشئ|صحيح|خطأ)/,
       number: /\d+/,
       operator: /-[-=]?|\+[+=]?|!=?|<=?|>=?|=(?:==?|>)?|&|\||\*\*?=?|\/=?|~|\^=?|%=?|\?|\.{3}/,
       punctuation: /[{}[\]؛()،.]/,
@@ -59,6 +59,7 @@ export default {
   },
   mounted() {
     this.fillCode();
+    this.updateCode();
 	},
 	methods: {
     highlighter(code) {
@@ -83,11 +84,15 @@ export default {
       if (this.codes) {
         this.code = this.codes.reduce((p, c) => p + "\n" + c);
       } else {
-        // var codesFromSession = sessionStorage.getItem("abjad-code");
-        var codesFromSession = this.$store.getters.code;
-        console.log(codesFromSession);
-        if (codesFromSession) {
-          this.code = codesFromSession;
+        var codesFromStore = this.$store.getters.code;
+        if (codesFromStore) {
+          this.code = codesFromStore;
+        } else {
+          var codesFromSession = sessionStorage.getItem("abjad-code");
+          if (codesFromSession) {
+            sessionStorage.removeItem('abjad-code');
+            this.code = codesFromSession;
+          }
         }
       }
     }

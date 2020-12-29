@@ -233,6 +233,21 @@ export default {
                 function: 'Checks if the first number is not equal to the second and returns the result',
                 return_type: 'Boolean'
               }
+            },
+            { 
+              id: 28, 
+              sign: '%',
+              example: ['أكتب(10 % 2)؛'],
+              ar: {
+                name: 'الباقي', 
+                function: 'تقسم الرقم الأول على الرقم الثاني، وتعيد الباقي، أي حاصل الكسور.',
+                return_type: 'رقم'
+              },
+              en: {
+                name: 'Modulo', 
+                function: 'Divides the two numbers and returns the remainder.',
+                return_type: 'Number'
+              }
             }
           ],
           unary: [

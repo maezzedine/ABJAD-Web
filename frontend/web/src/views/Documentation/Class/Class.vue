@@ -4,7 +4,7 @@
       <a href="#class"
         class="text-decoration-none text-right text-md-left">#</a>
       <template v-if="isArabic">
-        الملف
+        الصنف
       </template>
       <template v-else>
         Class
@@ -14,7 +14,7 @@
     <p v-if="isArabic">
       <span class="abjad">أبجد</span> هي لغةٌ غرضية التوجيه، أي بإمكانك انشاء
       أنواع بيانات خاصة! <br />
-      الملفات تجسد هيه الأنواع، بحيث يُعرف المُبرمج نوعًا (ملفًا) ذات خصائص معينة، بحيث يكون لكل قيمة
+      الصنفات تجسد هيه الأنواع، بحيث يُعرف المُبرمج نوعًا (صنفًا) ذات خصائص معينة، بحيث يكون لكل قيمة
       من هذا النوع هذه الخصائص. كما يمكن تعريف دالات خاصة بكل نوع.
     </p>
     <p v-else>
@@ -42,7 +42,7 @@
           <a href="#defining-class"
             class="text-decoration-none text-right text-md-left">#</a>
           <template v-if="isArabic">
-            تعريف ملف
+            تعريف صنف
           </template>
           <template v-else>
             Defining a Class
@@ -50,12 +50,12 @@
         </h2>
 
         <p v-if="isArabic">
-          صياغة تعريف ملف تكون كالتالي:
+          صياغة تعريف صنف تكون كالتالي:
           <ul>
-            <li>الكلمة المفتاح <code>ملف</code></li>
-            <li>اسم الملف</li>
+            <li>الكلمة المفتاح <code>صنف</code></li>
+            <li>اسم الصنف</li>
             <li>فتح حاوية <code>{</code></li>
-            <li>دالة بانية، وهي دالة لها نفس اسم الملف</li>
+            <li>دالة بانية، وهي دالة لها نفس اسم الصنف</li>
             <li>كود</li>
             <li>إغلاق الحاوية <code>{</code></li>
           </ul>
@@ -63,7 +63,7 @@
         <p v-else>
           The syntax for defining a class in <span class="abjad">ABJAD</span> is as the following:
           <ul>
-            <li>The keyword <code>ملف</code></li>
+            <li>The keyword <code>صنف</code></li>
             <li>The name of the class</li>
             <li>An opening brace <code>{</code></li>
             <li>A constructor for the class, which is a function having the name of the class</li>
@@ -85,9 +85,9 @@
           </h2>
 
           <p v-if="isArabic">
-            المثال التالي يُعرّف الملف <code>إنسان</code> ذات ثلاث خصائص:
+            المثال التالي يُعرّف الصنف <code>إنسان</code> ذات ثلاث خصائص:
             <code>إسم_أول</code>، <code>إسم_أخير</code> و<code>عمر</code>.
-            لهذا الملف دالة بانية تأخذ ثلاثة معطيات، بالإضافة إلى دالة أخرى
+            لهذا الصنف دالة بانية تأخذ ثلاثة معطيات، بالإضافة إلى دالة أخرى
             تحمل الاسم <code>تعديل_العمر</code> وتأخذ مُعطًى واحدًا.  <br />
             <b>الدالة البانية</b> يتم نداؤها وقت انشاء قيمة جديدة من النوع
             المُعرف، في هذه الحالة هو <code>إنسان</code>. أما المُعطيات الثلاثة
@@ -116,7 +116,7 @@
           <a href="#instantiating-class"
             class="text-decoration-none text-right text-md-left">#</a>
           <template v-if="isArabic">
-            إنشاء قيمة من نوع ملف
+            إنشاء قيمة من صنف
           </template>
           <template v-else>
             Instantiating a Class
@@ -124,10 +124,10 @@
         </h2>
 
         <p v-if="isArabic">
-          صياغة  إنشاء قيمة من نوع ملف تكون كالتالي:
+          صياغة  إنشاء قيمة من نوع صنف تكون كالتالي:
           <ul>
             <li>الكلمة المفتاح <code>انشئ</code></li>
-            <li>اسم الملف</li>
+            <li>اسم الصنف</li>
             <li>فتح قوس <code>(</code></li>
             <li>المُعطيات التي تأخذها الدالة البانية، منفصلة بفاصلة</li>
             <li>إغلاق القوس <code>)</code></li>
@@ -185,10 +185,10 @@
 
       <section id="accessing-fields-and-functions" class="page-body mt-5 mb-5">
         <h2 class="v-heading text-h6 text-sm-h6 mb-3">
-          <a href="#instantiating-class"
+          <a href="#accessing-fields-and-functions"
             class="text-decoration-none text-right text-md-left">#</a>
           <template v-if="isArabic">
-            الوصول إلى خصائص ودالات الملف
+            الوصول إلى خصائص ودالات الصنف
           </template>
           <template v-else>
             Accessing a Class's fields and functions
@@ -196,13 +196,13 @@
         </h2>
 
         <p v-if="isArabic">
-          للوصول إلى خصائص ودالات متغير من نوع ملف معين، كل ما عليك فعله
-          هو كتابة اسم المتغير، متبوعًا بنقطة، ومن ثم اسم الخاصية أو الدالة المرغوبة.
+          للوصول إلى دالات متغير من نوع صنف معين، كل ما عليك فعله
+          هو كتابة اسم المتغير، متبوعًا بنقطة، ومن ثم اسم الدالة المرغوبة،
+          مُعطيًا إياها القيم التي تحتاجها.
         </p>
         <p v-else>
-          To access the fields and functions of a class's object, you type
-          the name of the object, followed by a dot, then the name of the field
-          or function you want to access.
+          To access the functions of a class's object, you type the name of the object, followed by 
+          a dot, then the name of the function you want to access, giving it the needed parameters.
         </p>
 
         <h2 class="v-heading text-body-1 text-sm-body-1 font-weight-bold mb-1">
@@ -215,6 +215,63 @@
         </h2>
 
         <code-area :codes="codes.ex3" />
+
+        <section id="getters-setters" class="page-body mt-5 mb-5">
+          <h2 class="v-heading text-h6 text-sm-h6 mb-3">
+            <a href="#getters-setters"
+              class="text-decoration-none text-right text-md-left">#</a>
+            <template v-if="isArabic">
+              الحواصل والمُعدّلات
+            </template>
+            <template v-else>
+              Getters and Setters
+            </template>
+          </h2>
+
+          <p v-if="isArabic">
+            للحصول على قيمة الخصائص في صنف معين، يُحبذ استعمال دالات داخلية لذلك، 
+            بدلًا من الوصول إلى الخاصية مباشرة. <br />
+            هناك دالّتان مُتعارفٌ استعمالهُما في هذا السياق:
+            <ul>
+              <li><b>الحواصل:</b> وهي دالّات تُرجع قيمة الخاصية.</li>
+              <li><b>المُعدّلات:</b> وهي دالّات تُعدّل قيم الخاصية.</li>
+            </ul>
+          </p>
+          <p v-else>
+            To get the value of a field, it is recommended to use a member function rather
+            than accessing it directly. <br />
+            There are two convensional functions in this manner:
+            <ul>
+              <li><b>Getters:</b> are functions that simply return the value of the field.</li>
+              <li><b>Setters:</b> are functions that modify the value of the field.</li>
+            </ul>
+          </p>
+
+          <h2 class="v-heading text-body-1 text-sm-body-1 font-weight-bold mb-1">
+            <template v-if="isArabic">
+              مثال
+            </template>
+            <template v-else>
+              Example
+            </template>
+          </h2>
+
+          <code-area :codes="codes.ex4" />
+
+          <v-alert
+            class="mt-4"
+            text type="info"
+          >
+            <template v-if="isArabic">
+              الوصول إلى قيمة الخصائص مباشرة، دون استعمال الحواصل والمُعدّلات، قد يكون عُرضة
+              لأخطاء منطقية، خاصة في حالة التغير المستعمر لقيمة الخصائص.
+            </template>
+            <template v-else>
+              Accessing a field directly can be error prone, especially when its value
+              gets modified with time.
+            </template>
+          </v-alert>
+        </section>
       </section>
 
     </section>

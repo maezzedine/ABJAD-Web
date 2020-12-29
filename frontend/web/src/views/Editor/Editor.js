@@ -4,13 +4,17 @@ import api from '../../services/api';
 export default {
   components: { codeArea },
   data: () => ({
-    code: 'أكتب("مرحبا بالعالم!")؛\n# هذا تعليق\nأكتب("مرحبا")؛\nمتغير شرط_1 = صحيح؛',
+    code: '',
     output: '',
     error: '',
     loading: false
   }),
   created() {
     this.setTitle();
+  },
+  beforeDestroy() {
+    console.log(this.code);
+    sessionStorage.setItem('abjad-code', this.code);
   },
   computed: {
     isArabic() {
@@ -22,7 +26,6 @@ export default {
       window.document.title = (this.isArabic)? 'أبجد - محول برمجي' : 'ABJAD - Online Editor';
     },
     updateCode(c) {
-      // sessionStorage.setItem("abjad-code", c);
       this.$store.commit("setCode", c);
       this.code = c;
     },

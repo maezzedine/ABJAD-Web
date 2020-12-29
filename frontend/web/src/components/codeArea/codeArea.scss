@@ -41,8 +41,7 @@
     box-shadow: 1px 1px 2px 1px ;
     
     &:not(.read-only) {
-      min-height: 300px;
-      max-height: 50vh;
+      height: 60vh;
     }
 
     .prism-editor__textarea {

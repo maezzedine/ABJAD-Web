@@ -108,11 +108,20 @@
       </h2>
 
       <p v-if="isArabic">
-        سنناقشه لاحقا في الملفات.
+        سنناقشه لاحقا في
+        <router-link
+          :to="`/${$route.params.lang}/documentation/class`"
+        >
+          الأصناف
+        </router-link>.
       </p>
       <p v-else>
-        Discussed later in classes.
-        <!-- TODO: Add link -->
+        Discussed later in
+        <router-link
+          :to="`/${$route.params.lang}/documentation/class`"
+        >
+          classes
+        </router-link>.
       </p>
     </section>
 
@@ -249,15 +258,15 @@
 
         <p v-if="isArabic">
           لتحويل مقطع إلى النوع منطقي يجب نداء الدالة
-          <code>منطقي</code> مُعطينها مقطعًا<br />
+          <code>منطق</code> مُعطينها مقطعًا<br />
           مثال: قيمة <code>ق</code> تساوي خطأ.
         </p>
         <p v-else>
           Converting a String to Boolean happens by calling on the function 
-          <code>منطقي</code> and passing it a string. <br />
+          <code>منطق</code> and passing it a string. <br />
           e.g. <code>ق</code> will have the value of خطأ. 
         </p>
-        <code-area :codes="['متغير ق = مقطع(&quot;خطأ&quot;)؛']" />
+        <code-area :codes="['متغير ق = منطق(&quot;خطأ&quot;)؛']" />
       </section>
     </section>
 

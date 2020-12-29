@@ -11,11 +11,9 @@ export default {
         { id: 'running-code', level: 1, ar: 'تشغيل برنامج أبجد', en: 'Running ABJAD Code' },
       ],
       linksFooter: { 
-        prev: { path: `/${this.$route.params.lang}/documentation/class`, ar: 'الملف', en: 'Class' },
-        // next: { path: `/${this.$route.params.lang}/documentation/class`, ar: 'الملف', en: 'Class' },
-      },
-      codes: {
-        
+        prev: { path: `/${this.$route.params.lang}/documentation/class`, ar: 'الصنف', en: 'Class' },
+        next: { path: `/${this.$route.params.lang}/sample-codes/even-odd`, ar: 'كود عيني: مفرد\\مزدوج', en: 'Sample Code: Even/Odd' },
+        // next: { path: `/${this.$route.params.lang}/about`, ar: 'استفسار', en: 'About' },
       }
     }
   },

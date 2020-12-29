@@ -18,7 +18,7 @@ export default {
 			],
 			linksFooter: {
 				prev: { path: `/${this.$route.params.lang}/getting-started/installation`, ar: 'التحميل', en: 'Installation' },
-				// next: { path: `/${$route.params.lang}/documentation/variables`, ar: '', en: '' }
+				next: { path: `/${this.$route.params.lang}/documentation/syntax`, ar: 'الصياغة', en: 'Syntax' }
 			}
 		}
 	},

@@ -103,9 +103,29 @@ const routes = [
         component: () => import ('@/views/RunningCode/RunningCode.vue')
       },
       {
+        path: '/:lang/sample-codes/prime-numbers',
+        name: 'PrimeNumbers',
+        component: () => import ('@/views/SampleCodes/PrimeNumbers/PrimeNumbers.vue')
+      },
+      {
+        path: '/:lang/sample-codes/even-odd',
+        name: 'EvenNumbers',
+        component: () => import ('@/views/SampleCodes/EvenNumbers/EvenNumbers.vue')
+      },
+      {
+        path: '/:lang/sample-codes/sum-numbers',
+        name: 'Sum100Numbers',
+        component: () => import ('@/views/SampleCodes/Sum100Numbers/Sum100Numbers.vue')
+      },
+      {
         path: '/:lang/editor',
         name: 'Editor',
         component: () => import ('@/views/Editor/Editor.vue')
+      },
+      {
+        path: '/:lang/about',
+        name: 'About',
+        component: () => import ('@/views/About/About.vue')
       },
     ]
   },

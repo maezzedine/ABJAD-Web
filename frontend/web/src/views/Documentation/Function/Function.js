@@ -18,7 +18,7 @@ export default {
       ],
       linksFooter: { 
         prev: { path: `/${this.$route.params.lang}/documentation/for-loop`, ar: 'حلقة التكرار', en: 'For Loop' },
-        next: { path: `/${this.$route.params.lang}/documentation/class`, ar: 'الملف', en: 'Class' },
+        next: { path: `/${this.$route.params.lang}/documentation/class`, ar: 'الصنف', en: 'Class' },
       },
       codes: {
         ex1: [

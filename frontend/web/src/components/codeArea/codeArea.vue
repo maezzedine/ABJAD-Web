@@ -1,10 +1,10 @@
 <template>
 	<div class="code-container">
-		<!-- Copy button -->
 		<v-btn-toggle 
 			v-if="!editable"
 		 	dense class="mt-4"
 		>
+			<!-- Copy button -->
 			<v-tooltip bottom>
 				<template v-slot:activator="{ on, attrs }">
 					<v-btn type="button" 
@@ -22,6 +22,7 @@
 				</span>
 			</v-tooltip>
 
+			<!-- Tri it button -->
 			<v-btn
 				text
 				:class="{ 'v-btn--left': !direction || direction == 'rtl', 'v-btn--right': direction == 'ltr'}"
@@ -43,8 +44,9 @@
       v-model="code" 
       :highlight="highlighter" 
       line-numbers
+			:readonly="!editable"
     ></prism-editor>
-		
+		<!-- <input type="text" name="" id="" autofocus> -->
 		<div v-else class="abjad-bash">
 			<code>
 				{{code}}
