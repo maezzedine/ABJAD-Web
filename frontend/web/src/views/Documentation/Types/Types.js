@@ -36,7 +36,7 @@ export default {
   },
   methods: {
     setTitle() {
-      window.document.title = (this.isArabic)? 'أبجد - الأنواع' : 'ABJAD - Types';
+      window.document.title = (this.isArabic)? 'أبجد - أنواع البيانات' : 'ABJAD - Data Types';
     },
     anchorHashCheck() {
       scroll.anchorHashCheck(this);

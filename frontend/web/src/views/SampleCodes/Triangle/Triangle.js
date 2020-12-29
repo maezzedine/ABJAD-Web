@@ -8,15 +8,17 @@ export default {
   data() {
     return {
       linksFooter: { 
-        prev: { path: `/${this.$route.params.lang}/sample-codes/prime-numbers`, ar: 'كود عيني: الأعداد الأولية', en: 'Sample Code: Prime Numbers' },
-        next: { path: `/${this.$route.params.lang}/sample-codes/stars-triangle`, ar: 'كود عيني: مثلث نجوم', en: 'Sample Code: Stars Triangle' },
+        prev: { path: `/${this.$route.params.lang}/sample-codes/sum-numbers`, ar: 'كود عيني: جمع الأعداد', en: 'Sample Code: Sum Numbers' },
+        // next: { path: `/${this.$route.params.lang}/sample-codes/even-odd`, ar: 'كود عيني: الأعداد المفردة والمزدوجة', en: 'Sample Code: Even/Odd Numbers' },
       },
       codes: [
-        'متغير عداد = 0؛',
-        'كرر (متغير س = 1؛ س < 101؛ س++) {',
-        '  عداد += س؛',
+        'كرر (متغير س = 1؛ س < 10؛ س++) {',
+        '  متغير مثلث = ""؛',
+        '  كرر (متغير ش = 1؛ ش < س؛ ش++) {',
+        '   مثلث += " *"؛',
+        '  }',
+        '  أكتب(مثلث)؛',
         '}',
-        'أكتب(عداد)؛',
       ]
     }
   },
@@ -30,7 +32,7 @@ export default {
   },
   methods: {
     setTitle() {
-      window.document.title = (this.isArabic)? 'أبجد - عينة: جمع الأرقام' : 'ABJAD - Sample: Sum of Numbers';
+      window.document.title = (this.isArabic)? 'أبجد - عينة: مثلث النجوم' : 'ABJAD - Sample: Stars Triangle';
     },
     anchorHashCheck() {
       scroll.anchorHashCheck(this);

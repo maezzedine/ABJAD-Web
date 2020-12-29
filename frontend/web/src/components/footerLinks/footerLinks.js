@@ -5,6 +5,9 @@ export default {
   computed: {
 		isArabic() {
 			return this.$store.getters['lang'] == 'ar';
-		}
+    },
+    width () {
+      return screen.width;
+    }
 	}
 }

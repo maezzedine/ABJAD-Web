@@ -132,10 +132,15 @@ export default {
 							link: `/${this.$store.getters.lang}/sample-codes/prime-numbers`,
 						},
 						{
-							id: 30, 
+							id: 32, 
 							name: this.$store.getters.context['sum-numbers'],
 							link: `/${this.$store.getters.lang}/sample-codes/sum-numbers`,
-						}
+						},
+						{
+							id: 33, 
+							name: this.$store.getters.context['triangle'],
+							link: `/${this.$store.getters.lang}/sample-codes/stars-triangle`,
+						},
 					]
 				},
 				{

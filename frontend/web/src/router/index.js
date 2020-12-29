@@ -118,6 +118,11 @@ const routes = [
         component: () => import ('@/views/SampleCodes/Sum100Numbers/Sum100Numbers.vue')
       },
       {
+        path: '/:lang/sample-codes/stars-triangle',
+        name: 'Triangle',
+        component: () => import ('@/views/SampleCodes/Triangle/Triangle.vue')
+      },
+      {
         path: '/:lang/editor',
         name: 'Editor',
         component: () => import ('@/views/Editor/Editor.vue')

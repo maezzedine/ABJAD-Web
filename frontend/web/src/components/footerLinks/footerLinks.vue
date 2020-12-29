@@ -1,9 +1,11 @@
 <template>
-  <div>
+  <div class="pt-4">
     <v-divider></v-divider>
-    <v-footer class="pt-6">
-      <div
+    <v-footer class="pt-6 px-0" color="white">
+      <v-btn
+        outlined text :block="width < 600"
         v-if="links.prev" 
+        class="pa-5 mb-2"
         :class="{ 'ml-auto' : isArabic, 'mr-auto' : !isArabic}"
       >
         <v-icon>
@@ -15,10 +17,12 @@
           <template v-if="isArabic">{{links.prev.ar}}</template>
           <template v-else>{{links.prev.en}}</template>
         </router-link>
-      </div>
+      </v-btn>
       
-      <div 
-        v-if="links.next" 
+      <v-btn 
+        outlined text :block="width < 600"
+        v-if="links.next"
+        class="pa-5" 
         :class="{ 'mr-auto' : isArabic, 'ml-auto' : !isArabic}">
         <router-link 
           class="text-decoration-none text-h6"
@@ -29,7 +33,7 @@
         <v-icon>
           {{isArabic? 'mdi-chevron-left': 'mdi-chevron-right'}}
         </v-icon>
-      </div>
+      </v-btn>
     </v-footer>
   </div>
 </template>
