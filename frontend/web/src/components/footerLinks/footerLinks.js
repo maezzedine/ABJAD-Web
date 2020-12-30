@@ -8,6 +8,9 @@ export default {
     },
     width () {
       return screen.width;
+    },
+    url() {
+      return `${process.env.VUE_APP_URL}${this.$route.path}`
     }
 	}
 }

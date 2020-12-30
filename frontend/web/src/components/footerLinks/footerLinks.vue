@@ -35,6 +35,8 @@
         </v-icon>
       </v-btn>
     </v-footer>
+
+    <div class="fb-comments mt-16" :data-href="url" data-width="" data-numposts="5"></div>
   </div>
 </template>
 

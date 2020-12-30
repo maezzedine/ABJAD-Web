@@ -7,9 +7,10 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
-    "prismjs": "1.15.0",
     "core-js": "^3.6.5",
+    "prismjs": "1.15.0",
     "vue": "^2.6.11",
+    "vue-analytics": "^5.22.1",
     "vue-mermaid": "0.0.14",
     "vue-prism-editor": "^1.2.2",
     "vue-router": "^3.2.0",

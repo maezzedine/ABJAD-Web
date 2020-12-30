@@ -2,3 +2,9 @@
 obj/
 bin/
 *.user
+*.cer
+*.key
+*.pfx
+.env.Production
+.config/
+Properties/

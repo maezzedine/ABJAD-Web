@@ -87,7 +87,7 @@
         
         <div class="row ma-0">
           <a href="https://twitter.com/intent/tweet?button_hashtag=ABJAD_أبجد&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-related="mezdn" data-lang="ar" data-show-count="false">Tweet #ABJAD_أبجد</a>
-          <div class="fb-share-button mx-2" data-href="https://abjad.dev" data-layout="button_count" data-size="small">
+          <div class="fb-share-button mx-2" :data-href="base_url" data-layout="button_count" data-size="small">
             <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fabjad.dev%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
           </div>
           <div id="linked-in"></div>
@@ -100,7 +100,7 @@
           <div class="widget mt-auto">
             <a href="https://twitter.com/intent/tweet?button_hashtag=ABJAD_أبجد&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-related="mezdn" data-show-count="false">Tweet #ABJAD_أبجد</a>
           </div>
-          <div class="fb-share-button mx-2 mt-auto" data-href="https://abjad.dev" data-layout="button_count" data-size="small">
+          <div class="fb-share-button mx-2 mt-auto" :data-href="base_url" data-layout="button_count" data-size="small">
             <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fabjad.dev%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a>
           </div>
           <div class="mt-auto" id="linked-in"></div>

@@ -38,7 +38,7 @@ namespace ABJAD.WebServer.Controllers
                     en = e.EnglishMessage
                 });
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 return BadRequest(new
                 {

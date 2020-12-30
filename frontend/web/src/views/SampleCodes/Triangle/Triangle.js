@@ -9,7 +9,7 @@ export default {
     return {
       linksFooter: { 
         prev: { path: `/${this.$route.params.lang}/sample-codes/sum-numbers`, ar: 'كود عيني: جمع الأعداد', en: 'Sample Code: Sum Numbers' },
-        // next: { path: `/${this.$route.params.lang}/sample-codes/even-odd`, ar: 'كود عيني: الأعداد المفردة والمزدوجة', en: 'Sample Code: Even/Odd Numbers' },
+        next: { path: `/${this.$route.params.lang}/about`, ar: 'استفسار', en: 'About' },
       },
       codes: [
         'كرر (متغير س = 1؛ س < 10؛ س++) {',

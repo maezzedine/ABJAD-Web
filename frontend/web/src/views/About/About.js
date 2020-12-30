@@ -14,10 +14,9 @@ export default {
         { id: 'share', level: 2, ar: 'النشر', en: 'Share' },
       ],
       linksFooter: { 
-        // prev: { path: `/${this.$route.params.lang}/running-code`, ar: 'تشغيل برنامج أبجد', en: 'Running ABJAD Code' },
-        // next: { path: `/${this.$route.params.lang}/documentation/about`, ar: 'عن أبجد', en: 'About' },
+        prev: { path: `/${this.$route.params.lang}/sample-codes/stars-triangle`, ar: 'كود عيني: مثلث نجوم', en: 'Sample Code: Stars Triangle' },
       },
-      base_url: "https://www.abjad.dev/"
+      base_url: process.env.VUE_APP_URL
     }
   },
   created() {

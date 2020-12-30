@@ -1,6 +1,7 @@
 <template>
   <div class="page-body">
     <v-btn
+      :loading="loading"
       dark outlined icon
       elevation="2" class="mb-2"
       color="teal" @click="run"
