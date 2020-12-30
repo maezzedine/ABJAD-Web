@@ -21,3 +21,6 @@ A web platform for [ABJAD](https://github.com/mezdn/ABJAD)'s documentation and o
   - [ABJAD's Interpreter](https://github.com/mezdn/ABJAD/)
 
 ![GIF demo](https://raw.githubusercontent.com/mezdn/ABJAD-Web/master/assets/ezgif.com-gif-maker.gif?token=AKPLNOPZR7ZNO522LTSYCKC76W65O)
+
+## License:
+[MIT License](https://github.com/mezdn/ABJAD-Web/blob/master/LICENSE)
