@@ -13,7 +13,6 @@ export default {
     this.setTitle();
   },
   beforeDestroy() {
-    console.log(this.code);
     sessionStorage.setItem('abjad-code', this.code);
   },
   computed: {

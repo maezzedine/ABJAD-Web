@@ -19,7 +19,7 @@ export class Scroll {
       var diff = section.offsetTop - window.pageYOffset;
       if (diff > 0 && diff < screen.height) {
 
-        if (component.$route.hash != `#${section.id}`) {
+        if (section.id && component.$route.hash != `#${section.id}`) {
           component.$router.push({ hash: section.id });
         }
         break;

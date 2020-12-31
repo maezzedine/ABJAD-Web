@@ -34,7 +34,6 @@ export default {
 	},
 	watch: {
 		isArabic: function () {
-			console.log('hey');
 			this.setTitle();
 		}
 	}

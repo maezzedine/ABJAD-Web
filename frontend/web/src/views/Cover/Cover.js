@@ -14,7 +14,6 @@ export default {
             var langFromStore = this.$store['lang'];
             if (langFromStore) {
                 lang = langFromStore;
-                console.log(langFromStore);
             } else {
                 lang = localStorage.getItem('abjad-lang');
             }

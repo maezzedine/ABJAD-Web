@@ -123,9 +123,19 @@ const routes = [
         component: () => import ('@/views/SampleCodes/Triangle/Triangle.vue')
       },
       {
+        path: '/:lang/sample-codes/multiplication-table',
+        name: 'MultiplicationTable',
+        component: () => import ('@/views/SampleCodes/MultiplicationTable/MultiplicationTable.vue')
+      },
+      {
         path: '/:lang/editor',
         name: 'Editor',
         component: () => import ('@/views/Editor/Editor.vue')
+      },
+      {
+        path: '/:lang/keywords-reference',
+        name: 'Mappings',
+        component: () => import ('@/views/Mappings/Mappings.vue')
       },
       {
         path: '/:lang/about',

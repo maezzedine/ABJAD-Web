@@ -141,7 +141,18 @@ export default {
 							name: this.$store.getters.context['triangle'],
 							link: `/${this.$store.getters.lang}/sample-codes/stars-triangle`,
 						},
+						{
+							id: 35, 
+							name: this.$store.getters.context['multiplication-table'],
+							link: `/${this.$store.getters.lang}/sample-codes/multiplication-table`,
+						},
 					]
+				},
+				{
+					id: 34,
+					name: this.$store.getters.context['mappings'],
+					link: `/${this.$route.params.lang}/keywords-reference`,
+					close: 'mdi-paperclip'
 				},
 				{
 					id: 19,

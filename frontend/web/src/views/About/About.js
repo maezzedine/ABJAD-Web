@@ -14,7 +14,7 @@ export default {
         { id: 'share', level: 2, ar: 'النشر', en: 'Share' },
       ],
       linksFooter: { 
-        prev: { path: `/${this.$route.params.lang}/sample-codes/stars-triangle`, ar: 'كود عيني: مثلث نجوم', en: 'Sample Code: Stars Triangle' },
+        prev: { path: `/${this.$route.params.lang}/keywords-reference`, ar: 'دليل كلمات المفتاح', en: 'Keywords Reference' },
       },
       base_url: process.env.VUE_APP_URL
     }

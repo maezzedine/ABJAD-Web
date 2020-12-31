@@ -76,9 +76,7 @@ export default {
       }
     },
     setSessionCode(code) {
-      // console.log('set');
       this.$store.commit("setCode", code);
-      // sessionStorage.setItem("abjad-code", code);
     },
     fillCode() {
       if (this.codes) {

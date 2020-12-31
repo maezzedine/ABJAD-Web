@@ -8,16 +8,15 @@ export default {
   data() {
     return {
       linksFooter: { 
-        prev: { path: `/${this.$route.params.lang}/sample-codes/sum-numbers`, ar: 'كود عيني: جمع الأعداد', en: 'Sample Code: Sum Numbers' },
-        next: { path: `/${this.$route.params.lang}/sample-codes/multiplication-table`, ar: 'جدول الضرب', en: 'Multiplication Table' },
+        prev: { path: `/${this.$route.params.lang}/sample-codes/stars-triangle`, ar: 'كود عيني: مثلث نجوم', en: 'Sample Code: Stars Triangle' },
+        next: { path: `/${this.$route.params.lang}/keywords-reference`, ar: 'دليل كلمات المفتاح', en: 'Keywords Reference' },
       },
       codes: [
-        'كرر (متغير س = 1؛ س < 10؛ س++) {',
-        '  متغير مثلث = ""؛',
-        '  كرر (متغير ش = 1؛ ش < س؛ ش++) {',
-        '   مثلث += " *"؛',
+        'كرر (متغير أ = 1؛ أ <= 10؛ أ++) {',
+        '  كرر (متغير ب = 1؛ ب <= 10؛ ب++) {',
+        '    أكتب (مقطع(أ) + " * " + مقطع(ب) + " = " + مقطع(أ * ب))؛',
         '  }',
-        '  أكتب(مثلث)؛',
+        '  أكتب("-----------")؛',
         '}',
       ]
     }
@@ -32,7 +31,7 @@ export default {
   },
   methods: {
     setTitle() {
-      window.document.title = (this.isArabic)? 'أبجد - عينة: مثلث النجوم' : 'ABJAD - Sample: Stars Triangle';
+      window.document.title = (this.isArabic)? 'أبجد - عينة: Multiplication Table' : 'ABJAD - Sample: Multiplication Table';
     },
     anchorHashCheck() {
       scroll.anchorHashCheck(this);

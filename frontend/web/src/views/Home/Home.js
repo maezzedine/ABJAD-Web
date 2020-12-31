@@ -13,9 +13,14 @@ export default {
     created() {
         this.setLanguage();
     },
+    computed: {
+        url() {
+        return `${process.env.VUE_APP_URL}${this.$route.path}`
+        }
+    },
     methods: {
         setLanguage: function () {
             language.initialize(this);
-        }
+        },
     }
 }

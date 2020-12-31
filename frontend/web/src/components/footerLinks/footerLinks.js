@@ -12,5 +12,5 @@ export default {
     url() {
       return `${process.env.VUE_APP_URL}${this.$route.path}`
     }
-	}
+  }
 }
